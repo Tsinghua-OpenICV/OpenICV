@@ -1,0 +1,13 @@
+{
+     "Cam1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "LidarPandar"
+			
+
+        },
+"output":["pandar40"]
+
+    }
+ 
+}

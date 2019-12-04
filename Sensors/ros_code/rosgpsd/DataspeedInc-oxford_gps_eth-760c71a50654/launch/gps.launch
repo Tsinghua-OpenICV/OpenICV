@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch parameters -->
+  <arg name="output" default="screen" /> <!-- screen/log -->
+  <arg name="required" default="true" />
+  <arg name="respawn" default="false" />
+
+  <!-- Node parameters -->
+  <arg name="interface"     default="" />
+  <arg name="ip_address"    default="" />
+  <arg name="port"          default="3000" />
+  <arg name="frame_id_gps"  default="gps" />
+  <arg name="frame_id_vel"  default="enu" />
+  <arg name="frame_id_odom" default="base_footprint" />
+
+  <!-- Start the node -->
+  <node pkg="oxford_gps_eth" type="gps_node" name="gps_node" respawn="$(arg respawn)" required="$(arg required)" output="$(arg output)">
+    <param name="interface"     value="$(arg interface)" />
+    <param name="ip_address"    value="$(arg ip_address)" />
+    <param name="port"          value="$(arg port)" />
+    <param name="frame_id_gps"  value="$(arg frame_id_gps)" />
+    <param name="frame_id_vel"  value="$(arg frame_id_vel)" />
+    <param name="frame_id_odom" value="$(arg frame_id_odom)" />
+  </node>
+
+</launch>

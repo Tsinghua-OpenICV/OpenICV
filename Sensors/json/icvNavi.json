@@ -1,0 +1,11 @@
+{
+     "Cam1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "Navifunction"
+			
+
+        }
+    }
+ 
+}

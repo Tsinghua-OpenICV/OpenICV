@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pacpus>
+	<components>
+		<component name="ublox_nmea" type="GpsComponent"  
+			port="COM2"  
+			baudrate="115200" 
+			bytesize="8" 
+			parity="0" 
+			stopbits="1" 
+			recording="true"/>
+		</components>
+			<connections>
+      </connections>
+	<plugins prefix="" postfix="" extension="dll">
+		<plugin lib="Gps" />
+	</plugins>
+</pacpus>

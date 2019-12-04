@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Parameters -->
+  <arg name="ip_address"    default="127.3.2.1" />
+  <arg name="port"          default="3333" />
+  <arg name="frame_id_gps"  default="gps" />
+  <arg name="frame_id_vel"  default="enu" />
+  <arg name="frame_id_odom"  default="base_footprint" />
+
+  <!-- Start node under test -->
+  <include file="$(find oxford_gps_eth)/launch/gps.launch" >
+    <arg name="ip_address"    value="$(arg ip_address)" />
+    <arg name="port"          value="$(arg port)" />
+    <arg name="frame_id_gps"  value="$(arg frame_id_gps)" />
+    <arg name="frame_id_vel"  value="$(arg frame_id_vel)" />
+    <arg name="frame_id_odom" value="$(arg frame_id_odom)" />
+  </include>
+
+  <!-- Start the rostest -->
+  <test test-name="test_system" pkg="oxford_gps_eth"
+        type="test_system" name="test_system">
+    <param name="ip_address"   value="$(arg ip_address)" />
+    <param name="port"         value="$(arg port)" />
+    <param name="frame_id_gps"  value="$(arg frame_id_gps)" />
+    <param name="frame_id_vel"  value="$(arg frame_id_vel)" />
+    <param name="frame_id_odom" value="$(arg frame_id_odom)" />
+  </test>
+
+</launch>
