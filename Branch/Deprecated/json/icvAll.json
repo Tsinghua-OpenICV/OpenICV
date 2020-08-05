@@ -1,0 +1,75 @@
+{
+    "replay": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "Replay",
+            "path": "/home/linaro/catkin_ws/icvbag/1567158049.icvbag"
+        },
+        "output":["image","msg_imu","msg_fix","msg_vel","msg_odom","lrr1","lrr2","srr1","srr2","srr3","srr4"]
+    },
+    "ssd": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "SSD"
+        },
+        "input":[{"name":"pic1","connect":"replay.image"}],
+        "output":["bbox","image"]
+    },
+    "Lane": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "LaneDetectionCV"
+        },
+        "input":[{"name":"pic1","connect":"replay.image"}],
+        "output":["lane","image"]
+    },
+    "Fusion": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "SensorFusion"
+        },
+        "input":[{"name":"LRR1","connect":"replay.lrr1"},
+            {"name":"LRR2","connect":"replay.lrr2"},
+            {"name":"SRR1","connect":"replay.srr1"},
+            {"name":"SRR2","connect":"replay.srr2"},
+            {"name":"SRR3","connect":"replay.srr3"},
+            {"name":"SRR4","connect":"replay.srr4"},
+            {"name":"IMU", "connect":"replay.msg_imu"},
+            {"name":"Vel", "connect":"replay.msg_vel"},
+            {"name":"fix", "connect":"replay.msg_fix"},
+            {"name":"BBox2d","connect":"ssd.bbox"},
+            {"name":"lane","connect":"Lane.lane"},
+            {"name":"sourceImage","connect":"replay.image"}],
+        "output":["fusion","image"]
+    },
+   "FCW": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "ForwardCollisionWarning"
+        },
+        "input":[{"name":"lane","connect":"Lane.lane"},{"name":"fusion","connect":"Fusion.fusion"}],
+	    "output":["image"]
+   },
+   "LDW": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "LaneDepartureWarning"
+        },
+        "input":[{"name":"lane","connect":"Lane.lane"},{"name":"vel","connect":"replay.msg_vel"}],
+        "output":["image"]
+    },  
+   "display":{
+        "type": "icvThreadedNode",
+        "function":{
+            "type": "DisplayFunction"
+        },
+        "input":[
+            {"name":"ssd","connect":"ssd.image"},
+            {"name":"lane","connect":"Lane.image"},
+            {"name":"fcw","connect":"FCW.image"},
+            {"name":"ldw","connect":"LDW.image"},
+            {"name":"fusion","connect":"Fusion.image"}
+        ]
+    }
+ 
+}

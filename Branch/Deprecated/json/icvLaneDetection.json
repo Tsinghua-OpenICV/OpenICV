@@ -1,0 +1,18 @@
+{
+    "replay1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "Replay",
+            "path": "/home/linaro/catkin_ws/icvbag/1567158049.icvbag"
+        },
+        "output":["picture","msg_imu","msg_fix","msg_vel","msg_odom","lrr1","lrr2","srr1","srr2","srr3","srr4"]    },
+    "Lane": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "LaneDetectionCV"
+        },
+        "input":[{"name":"pic1","connect":"replay1.picture"}],
+        "output":["lane","image"]
+    }
+ 
+}

@@ -1,0 +1,87 @@
+{
+    "IMU1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "IMUEthernet",
+            "local_port":"3000"
+        },
+        "output":["msg_imu","msg_fix","msg_vel","msg_odom"]
+    },
+    "LRR1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiLong",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4001,
+            "local_adress":"192.168.110.1",
+            "local_port":4001
+        },
+        "output":["lrrdata"]
+        },
+    "LRR2": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiLong",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4011,
+            "local_adress":"192.168.110.1",
+            "local_port":4011
+        },
+        "output":["lrrdata"]
+        },
+    "SRR1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4002,
+            "local_adress":"192.168.110.1",
+            "local_port":4002
+        },
+        "output":["srrdata"]
+        },
+    "SRR2": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4012,
+            "local_adress":"192.168.110.1",
+            "local_port":4012
+        },
+        "output":["srrdata"]
+        },
+    "SRR3": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4003,
+            "local_adress":"192.168.110.1",
+            "local_port":4003
+        },
+        "output":["srrdata"]
+        },
+    "SRR4": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4013,
+            "local_adress":"192.168.110.1",
+            "local_port":4013
+        },
+        "output":["srrdata"]
+        },
+    "Fusion": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "SensorFusion"
+        },
+        "input":[{"name":"LRR1","connect":"LRR1.lrrdata"},{"name":"LRR2","connect":"LRR2.lrrdata"},{"name":"SRR1","connect":"SRR1.srrdata"},
+            {"name":"SRR2","connect":"SRR2.srrdata"},{"name":"SRR3","connect":"SRR3.srrdata"},{"name":"SRR4","connect":"SRR4.srrdata"},
+            {"name":"IMU", "connect":"IMU1.msg_imu"},{"name":"Vel", "connect":"IMU1.msg_vel"}],
+            "output":["fusion"]
+    }
+ 
+}

@@ -1,0 +1,10 @@
+{
+    "replay1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "MSGReplay",
+            "path": "/home/linaro/OpenICV/ICVOS/bin/2019_8_27_9_54/1566870881.icvbag"
+        }
+    }
+ 
+}

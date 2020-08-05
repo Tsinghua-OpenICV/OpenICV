@@ -1,7 +1,0 @@
-add_subdirectory(Basis)
-add_subdirectory(Core)
-add_subdirectory(Extensions)
-add_subdirectory(Engine)
-if(OPENICV_ENABLE_REMOTE)
-    add_subdirectory(Net)
-endif()

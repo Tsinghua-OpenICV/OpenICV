@@ -1,0 +1,9 @@
+{
+    "pubnode": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "ImagePub"
+        },
+        "output":["picture"]
+    }
+}

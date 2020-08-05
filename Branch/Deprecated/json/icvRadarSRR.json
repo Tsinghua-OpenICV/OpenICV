@@ -1,0 +1,14 @@
+{
+     "SRR1": {
+            "type": "icvThreadedNode",
+            "function": { 
+                "type": "RadarContiSide",
+                "remote_adress":"192.168.110.101",
+                "remote_port":4013,
+                "local_adress":"192.168.110.1",
+                "local_port":4013
+            },
+            "output":["lrrdata"]
+            }
+ 
+}

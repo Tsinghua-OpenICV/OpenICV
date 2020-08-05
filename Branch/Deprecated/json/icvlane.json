@@ -1,0 +1,10 @@
+{
+     "Cam1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "PylonCam"		
+        },
+        "output":["picture"]
+    }
+ 
+}

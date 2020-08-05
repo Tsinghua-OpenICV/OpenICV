@@ -1,0 +1,18 @@
+{
+    "replay1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "Replay",
+            "path": "/home/linaro/OpenICV/ICVOS/bin/2019_8_21_11_56/1566359819.icvbag"
+        },
+        "output":["picture","msg_imu","msg_fix","msg_vel","msg_odom","lrr1","lrr2","srr1","srr2","srr3","srr4"]    },
+    "ssd": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "SSD"
+        },
+        "input":[{"name":"pic1","connect":"replay1.picture"}],
+        "output":["bbox","image"]
+    }
+ 
+}

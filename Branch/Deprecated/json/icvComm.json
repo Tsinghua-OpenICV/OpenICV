@@ -1,0 +1,17 @@
+{
+    "pubnode": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "ImagePub"
+        },
+        "output":["picture"]
+    },
+    "subnode": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "ImageSub"
+        },
+        "input":[{"name":"pic1","connect":"pubnode.picture"}]
+    }
+ 
+}

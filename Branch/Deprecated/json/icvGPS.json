@@ -1,0 +1,9 @@
+{
+     "GPS1": {
+            "type": "icvThreadedNode",
+            "function": { 
+                "type": "GpsSerial"
+            }
+          
+            }
+}

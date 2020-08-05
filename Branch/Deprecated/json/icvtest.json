@@ -1,0 +1,23 @@
+{
+    "LRR2": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiLong",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4011,
+            "local_adress":"192.168.110.1",
+            "local_port":4011
+        },
+        "output":["lrrdata"]
+        },
+    "Fusion": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "SensorFusion"
+        },
+        "input":[{"name":"LRR2","connect":"LRR2.lrrdata"}],
+            "output":["fusion"]
+    }
+ 
+}
+

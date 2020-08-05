@@ -1,0 +1,30 @@
+{
+    "replay1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "Replay",
+            "path": "/home/linaro/OpenICV/ICVOS/bin/2019_8_21_11_56/1566359819.icvbag"
+        },
+        "output":["picture","msg_imu","msg_fix","msg_vel","msg_odom","lrr1","lrr2","srr1","srr2","srr3","srr4"]
+    },
+    "ssd": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "SSD"
+        },
+        "input":[{"name":"pic1","connect":"replay1.picture"}],
+        "output":["bbox"]
+    },
+    "Fusion": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "SensorFusion"
+        },
+        "input":[{"name":"LRR1","connect":"replay1.lrr1"},{"name":"LRR2","connect":"replay1.lrr2"},{"name":"SRR1","connect":"replay1.srr1"},
+            {"name":"SRR2","connect":"replay1.srr2"},{"name":"SRR3","connect":"replay1.srr3"},{"name":"SRR4","connect":"replay1.srr4"},
+            {"name":"IMU", "connect":"replay1.msg_imu"},{"name":"Vel", "connect":"replay1.msg_vel"},{"name":"Vel", "connect":"replay1.msg_fix"},
+            {"name":"BBox2d","connect":"ssd.bbox"}],
+        "output":["fusion"]
+    }
+ 
+}

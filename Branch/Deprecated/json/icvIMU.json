@@ -1,0 +1,11 @@
+{
+     "IMU1": {
+            "type": "icvThreadedNode",
+            "function": { 
+                "type": "IMUEthernet",
+                "local_port":"3000"
+            },
+            "output":["msg_imu","msg_fix","msg_vel","msg_odom"]
+            }
+ 
+}

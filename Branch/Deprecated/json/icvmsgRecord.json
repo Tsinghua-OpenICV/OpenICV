@@ -1,0 +1,9 @@
+{
+    "Recorder1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "msgRecording","Dur_min":"0.5"
+        }
+    }
+ 
+}

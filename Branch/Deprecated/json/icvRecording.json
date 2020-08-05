@@ -1,0 +1,97 @@
+{
+    "Cam1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "PylonCam"		
+        },
+        "output":["picture"]
+    },
+    "IMU1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "IMUEthernet",
+            "local_port":"3000"
+        },
+        "output":["msg_imu","msg_fix","msg_vel","msg_odom"]
+    },
+    "LRR1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiLong",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4001,
+            "local_adress":"192.168.110.1",
+            "local_port":4001
+        },
+        "output":["lrrdata1"]
+        },
+    "LRR2": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiLong",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4011,
+            "local_adress":"192.168.110.1",
+            "local_port":4011
+        },
+        "output":["lrrdata2"]
+        },
+    "SRR1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4002,
+            "local_adress":"192.168.110.1",
+            "local_port":4002
+        },
+        "output":["srrdata1"]
+        },
+    "SRR2": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4012,
+            "local_adress":"192.168.110.1",
+            "local_port":4012
+        },
+        "output":["srrdata2"]
+        },
+    "SRR3": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4003,
+            "local_adress":"192.168.110.1",
+            "local_port":4003
+        },
+        "output":["srrdata3"]
+        },
+    "SRR4": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "RadarContiSide",
+            "remote_adress":"192.168.110.101",
+            "remote_port":4013,
+            "local_adress":"192.168.110.1",
+            "local_port":4013
+        },
+        "output":["srrdata4"]
+        },
+    "Recorder1": {
+        "type": "icvThreadedNode",
+        "function": { 
+            "type": "Recording","InputNumber":"11","Dur_min":"0.5"
+        },
+    "input":[{"name":"image","connect":"Cam1.picture"},
+        {"name":"IMU","connect":"IMU1.msg_imu"},{"name":"Fix","connect":"IMU1.msg_fix"},
+        {"name":"Vel","connect":"IMU1.msg_vel"},{"name":"Odom","connect":"IMU1.msg_odom"},
+        {"name":"LRR1","connect":"LRR1.lrrdata1"},{"name":"LRR2","connect":"LRR2.lrrdata2"},
+        {"name":"SRR1","connect":"SRR1.srrdata1"},{"name":"SRR2","connect":"SRR2.srrdata2"},
+        {"name":"SRR3","connect":"SRR3.srrdata3"},{"name":"SRR4","connect":"SRR4.srrdata4"}
+        ]
+    }
+ 
+}

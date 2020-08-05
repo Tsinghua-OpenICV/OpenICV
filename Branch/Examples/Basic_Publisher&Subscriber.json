@@ -1,0 +1,11 @@
+{
+"Publisher":
+{
+        "function": {"name":"icvRandomSource"} 
+},
+"Subscriber":
+{
+        "function": {"name":"icvStdStreamSink"} 
+}
+}
+
