@@ -10,7 +10,7 @@
 ### New Features
 
 * **Important** 
-* Old templates of congiguration file JSON has been replaced by the new principle, for details refer to Readme.md.  
+* Old templates of congiguration file JSON has been replaced by the new principle.
 
 ### Bug Fixes
   
