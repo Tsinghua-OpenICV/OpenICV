@@ -27,7 +27,9 @@ sudo apt-get install libpcl-dev
 Installation of OpenICV is based on cmake.
 ```sh
 git clone https://github.com/Tsinghua-OpenICV/OpenICV.git
-cd OpenICV/build
+cd OpenICV
+mkdir build
+cd build
 cmake .
 make
 sudo make install
