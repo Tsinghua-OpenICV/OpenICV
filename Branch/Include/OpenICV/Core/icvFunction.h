@@ -212,6 +212,7 @@ using namespace std;
   
     void icvPublish_Remote(string pub,icvDataObject* datatosend)
     {
+        cout<<"go to here publish"<<endl;
             stringstream ss;
             datatosend->Serialize(ss,0);
             //ss<<"dada";
@@ -225,7 +226,7 @@ using namespace std;
        // items[0].events = ZMQ_POLLIN;
       //  zmq_poll(items, 1, 0);
         int size_;
-       
+            cout<<"go to here subscribe"<<endl;
             // size_= zmq_recv(items[0].socket, buffer_receive, length, 0);
            
             string data;
@@ -278,9 +279,10 @@ using namespace std;
                         first_sub->at(icvSubscriber_.at(sub))=false;
                         
                     }
-                    if(datatypecheck) 
-                    sub_buff->CopyTo(data); 
-                    else ICV_LOG_WARN<<"SUBSCRIBE DATA TYPE NOT CORRESPONDED";
+                    if(datatypecheck){ 
+                    sub_buff->CopyTo(data);
+                    data->empty=false; }
+                    else {ICV_LOG_WARN<<"SUBSCRIBE DATA TYPE NOT CORRESPONDED";}
                     
                 }
                 else {  ICV_LOG_WARN<<"SUBSCRIBE DATA EMPTY"; }

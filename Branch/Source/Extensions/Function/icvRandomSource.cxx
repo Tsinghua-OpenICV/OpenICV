@@ -16,7 +16,7 @@ namespace icv { namespace function
 
     icvRandomSource::icvRandomSource() : icvRandomSource(ICV_NULLPTR) {}
     icvRandomSource::icvRandomSource(icv_shared_ptr<const icvMetaData> info)
-        : icvFunction( info)
+        : icvFunction(info)
     {
         if (_information.Contains(KEY_INTERVAL))
         {
@@ -24,11 +24,11 @@ namespace icv { namespace function
             _information.Remove(KEY_INTERVAL);
         }
         //int parameter=_information.GetInteger("para");
-        Register_Pub ("Random number");
+        //Register_Pub ("Random number");
         //Register_Pub_Remote("ipc://127.0.0.1:5555");
-        //Register_Pub_Remote("tcp://*:5555");
+        Register_Pub_Remote("tcp://127.0.0.1:2000");
 //run once when initialized
-        Execute();
+        
     }
 
     void icvRandomSource::Execute()
@@ -42,12 +42,12 @@ namespace icv { namespace function
        // long t_res=get_loop_time(false);
        // time_t temp1=icvTime::time_ns();
         data::icvInt64Data datatosend(data);
-        //icvPublish_Remote("tcp://*:5555",&datatosend);
-        // icvPublish_Remote("ipc://127.0.0.1:5555",&datatosend);
+       
+        //icvPublish_Remote("ipc://127.0.0.1:5555",&datatosend);
 
         ICV_LOG_INFO<<"send data: "<<data;
-        icvPublish("Random number",&datatosend);//=data;
-
+        //icvPublish("Random number",&datatosend);//=data;
+        icvPublish_Remote("tcp://127.0.0.1:2000",&datatosend);
 
     }
 }}

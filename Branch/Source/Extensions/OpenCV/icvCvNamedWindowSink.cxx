@@ -24,7 +24,7 @@ namespace icv
                 _name = _information.GetString(KEY_WINDOW_NAME);
             else
                 _name = "anonymous" + to_string(_name_counter++);
-            sub1=Register_Sub("cam_image");
+            Register_Sub("cam_image");
         }
 
 

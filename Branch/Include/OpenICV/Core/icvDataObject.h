@@ -20,6 +20,8 @@ namespace icv { namespace core
         virtual void Reserve() = 0; // If the data is already initialized, then this method just return
         virtual void Dispose() = 0; // If the data is already disposed, then this method just return
         bool Is_Reserved(){return is_reserved;};
+        bool is_not_empty(){return !empty;};
+
         // virtual ~icvDataObject()
         // {
         //     Dispose() cannot be called here due to constructor limitation
@@ -27,7 +29,7 @@ namespace icv { namespace core
         //
         //     shared_ptr will take the charge of freeing the memory
         // }
-
+        bool empty=true;
         virtual Uint64 GetActualMemorySize() = 0;
 
         ICV_PROPERTY_GETSET(SourceTime, _sourceTime, time_t)
@@ -54,6 +56,7 @@ namespace icv { namespace core
     protected:
         time_t _sourceTime=0;
         bool is_reserved=false;
+        
     };
 }}
 

@@ -1,0 +1,23 @@
+<package>
+
+  <name>pandar_msgs</name>
+  <version>1.0.0</version>
+  <description>
+    ROS message definitions for Pandar40 3D LIDARs.
+  </description>
+  <maintainer email="yangsheng@hesaitech.com">Yang Sheng</maintainer>
+  <author>Yang Sheng</author>
+  <license>BSD</license>
+
+  <url type="repository">https://github.com/HesaiTechnology/pandar_ros</url>
+  <url type="bugtracker">https://github.com/HesaiTechnology/pandar_ros/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+
+</package>

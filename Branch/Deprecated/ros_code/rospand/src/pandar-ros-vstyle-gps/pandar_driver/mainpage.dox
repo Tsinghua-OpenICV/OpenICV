@@ -1,0 +1,77 @@
+/**
+\mainpage
+
+\htmlinclude manifest.html
+
+ROS device driver for Pandar40 3D LIDARs. 
+
+\section read Pandar40 device driver
+
+ROS device driver node that captures Pandar40 3D LIDAR data and
+publishes it to the \b pandar_msgs/Pandar40Scan topic.
+
+\subsection read_examples Examples
+
+Read the Pandar40 input socket as fast as possible.  Publish each
+complete revolution to \b pandar/rawscan.
+
+\verbatim
+$ rosrun pandar_driver pandar_node
+\endverbatim
+
+Read previously captured Pandar40 packets from dump.pcap file.
+Publish messages to \b pandar/rawscan at approximately 10 Hz rate.
+
+Dump files can be grabbed by libpcap, PandarViewer,
+ethereal, wireshark, tcpdump, or the pandar_driver pdump command.
+
+\verbatim
+$ rosrun pandar_driver pandar_node _pcap:=dump.pcap
+\endverbatim
+
+\subsection read_names ROS names
+
+Node name: \b pandar_node
+
+Publishes: \b pandar_packets raw Pandar40 data packets for one
+entire revolution of the device.
+
+Parameters:
+
+ - \b ~pcap (string): PCAP dump input file name (default: use real device)
+ - \b ~input/read_once (bool): if true, read input file only once
+   (default false).
+ - \b ~input/read_fast (bool): if true, read input file as fast as
+   possible (default false).
+ - \b ~input/repeat_delay (double): number of seconds to delay before
+   repeating input file (default: 0.0).
+
+\section pdump_command pdump Command
+
+The pdump command dumps raw data from the Pandar40 LIDAR in PCAP
+format.  It is a shell script wrapper with some obscure options for
+the powerful tcpdump command.
+
+Other methods of acquiring PCAP data include using tcpdump directly,
+wireshark, Pandar40's DSR software, and programming with libpcap.
+
+\subsection pdump_usage Usage
+
+\verbatim
+  rosrun pandar_driver pdump <file_prefix> [ <interface> ]
+
+        <file_prefix>   file name to dump (with 3-digit number suffix)
+        <interface>     interface to read from (default: "eth1")
+\endverbatim
+
+\subsection pdump_examples Examples
+
+Dump Pandar40 packets to a series of files named "pcap-000",
+"pcap-001", etc.  Each file will be about 100MB, holding a little more
+than 30 seconds of Pandar40 packets.  Type ^C when finished.
+
+\verbatim
+$ rosrun pandar_driver pdump pcap- eth0
+\endverbatim
+
+*/

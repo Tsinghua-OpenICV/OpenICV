@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>oxford_gps_eth</name>
+  <version>1.0.0</version>
+  <description>
+    Ethernet interface to OxTS GPS receivers (NCOM packet structure)
+  </description>
+
+  <license>BSD</license>
+  <author email="khallenbeck@dataspeedinc.com">Kevin Hallenbeck</author>
+  <maintainer email="khallenbeck@dataspeedinc.com">Kevin Hallenbeck</maintainer>
+  <url type="website">http://wiki.ros.org/oxford_gps_eth</url>
+  <url type="repository">https://bitbucket.org/dataspeedinc/oxford_gps_eth</url>
+  <url type="bugtracker">https://bitbucket.org/dataspeedinc/oxford_gps_eth/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>gps_common</depend>
+  <depend>tf</depend>
+
+  <exec_depend>roslaunch</exec_depend>
+
+  <test_depend>roslaunch</test_depend>
+  <test_depend>rostest</test_depend>
+
+</package>

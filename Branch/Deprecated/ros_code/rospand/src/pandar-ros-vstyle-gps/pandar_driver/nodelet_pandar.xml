@@ -1,0 +1,9 @@
+<library path="lib/libdriver_nodelet">
+  <class name="pandar_driver/DriverNodelet"
+         type="pandar_driver::DriverNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description> 
+      Publish raw Pandar40 data packets.
+    </description>
+  </class>
+</library>

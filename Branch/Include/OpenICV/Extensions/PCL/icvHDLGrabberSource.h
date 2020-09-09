@@ -2,15 +2,15 @@
 #define icvHDLGrabberSource_h
 
 #include "OpenICV/Core/icvFunction.h"
-
+#include<pcl/io/pcd_io.h>
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/io/hdl_grabber.h>
 //#include <pcl/io/vlp_grabber.h>
 #include <pcl/visualization/point_cloud_color_handlers.h>
 #include <pcl/visualization/cloud_viewer.h>
-#include "OpenICV/Extensions/PCL/icvPointCloudData.hxx"
 
+#include "OpenICV/structure/icvPointCloudData.hxx"
 namespace icv
 {
     namespace pcl
@@ -22,6 +22,7 @@ namespace icv
         public:
         typedef ::pcl::PointCloud<::pcl::PointXYZI> Cloud;
 		typedef typename Cloud::ConstPtr CloudConstPtr;
+        typedef typename Cloud::Ptr CloudPtr;
             icvHDLGrabberSource();
             icvHDLGrabberSource(icv_shared_ptr<const icvMetaData> info);
             
@@ -43,7 +44,8 @@ namespace icv
 			bool viewpoint_; int width_, height_;
 			boost::signals2::connection cloud_connection;
 			CloudConstPtr cloud_, cloud;
-            icv::pcl::icvPointCloudData<::pcl::PointXYZI> *tempdata;
+            CloudPtr cloud_new;
+            icv::pcl::icvPointCloudData<::pcl::PointXYZI> tempdata;
 			//pcl::visualization::PointCloudColorHandler<pcl::PointXYZI> &handler_;
 			//pcl::visualization::PointCloudColorHandlerGenericField<pcl::PointXYZI> handler_;
 			int count_ = 0;

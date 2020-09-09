@@ -17,6 +17,7 @@ namespace icv { namespace _impl
         virtual void Record(const icvDataObject* data, const std::string& sourcePort) = 0;
         virtual void PlayNext(icvDataObject* data, const std::string& sourcePort) = 0;
 
+
     protected:
         Time64 _tstart;
         uint32_t _version;

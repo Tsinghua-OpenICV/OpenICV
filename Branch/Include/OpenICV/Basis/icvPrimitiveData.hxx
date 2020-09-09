@@ -194,7 +194,7 @@ namespace icv { namespace data
 
 
         }
-                void setvalue(const T& data,const time_t timestamp)
+        void setvalue(const T& data,const time_t timestamp)
         {
             Reserve();
            *_data = data;

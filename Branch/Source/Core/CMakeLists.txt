@@ -18,7 +18,7 @@ find_library(ZeroMQ_LIBRARY
 
 
 add_library(${MODULE_TARGET_NAME} SHARED ${${MODULE_SRC_NAME}} ${${MODULE_HDR_NAME}})
-target_link_libraries(${MODULE_TARGET_NAME} PUBLIC ${Boost_LIBRARIES} ${ZeroMQ_LIBRARY} msgpack)
+target_link_libraries(${MODULE_TARGET_NAME} PUBLIC ${Boost_LIBRARIES} ${ZeroMQ_LIBRARY} msgpackc)
 target_include_directories(${MODULE_TARGET_NAME} SYSTEM PUBLIC ${ZeroMQ_INCLUDE_DIR}
 $<BUILD_INTERFACE:${Boost_INCLUDE_DIRS}>  
     $<INSTALL_INTERFACE:>)

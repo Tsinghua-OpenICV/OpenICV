@@ -91,7 +91,7 @@ Header header_ ;
 int targetnum_;
 //vector<sLrrProcData>alldata_;
 sLrrProcData alldata_[LRRMaxTarNum];
-MSGPACK_DEFINE(header_, targetnum_,alldata_);
+MSGPACK_DEFINE(header_, targetnum_,alldata_)
 };
 
 

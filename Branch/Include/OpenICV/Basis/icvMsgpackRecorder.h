@@ -28,8 +28,9 @@ namespace icv { namespace _impl
         icvMsgpackRecorder(const boost::filesystem::path& filepath, uint32_t version);
         ~icvMsgpackRecorder();
         void setRecordpath(string pathof);
-        virtual void Record(const icvDataObject* data, const string& source) ICV_OVERRIDE;
-         void Record(const icvDataObject* data, const Uint32& source,const Int64 timestamp ) ;
+        //virtual void Record(const icvDataObject* data, const string& source) ICV_OVERRIDE;
+        void Record(const icvDataObject* data, const string& source);
+        // void Record(const icvDataObject* data, const Uint32& source,const Int64 timestamp ) ;
          void closefile() ;
 
         virtual void PlayNext(icvDataObject* data, const string& source) ICV_OVERRIDE;
@@ -39,8 +40,8 @@ namespace icv { namespace _impl
         boost::filesystem::path _path_write;
 
         // do not use unordered_map for msgpack compability
-        std::map<string, std::vector<std::string>> _buffer;
-        std::map<string, Uint32> _bufferIdx;
+        std::map<std::string, std::vector<std::string>> _buffer;
+        std::map<std::string, Uint32> _bufferIdx;
         int id_;
         time_t start_record;
         RecordHeader header_;

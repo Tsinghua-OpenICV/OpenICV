@@ -1,4 +1,6 @@
 #execute_process(COMMAND sudo apt-get install libmsgpack-dev)
+#@Deprecated
+
 string(APPEND msg_link "http://msgpack.org/releases/cpp/msgpack-0.5.7.tar.gz")
 string(APPEND MSGdown ${OpenICV_ini_path} "/Third_build" )
 

@@ -20,10 +20,10 @@ namespace icv { namespace function
     {
 
 
-   Register_Sub("Random number");
-    //Register_Sub_Remote("tcp://127.0.0.1:5555");
+    //Register_Sub("Random number");
+    Register_Sub_Remote("tcp://127.0.0.1:2000");
     //Register_Sub_Remote("ipc://127.0.0.1:5555");
-   Execute();
+   
     }
 
 
@@ -32,14 +32,10 @@ namespace icv { namespace function
 
         icv::data::icvInt64Data a;
         //icvSubscribe<icv::data::icvInt64Data>("Random number");
-        icvSubscribe("Random number",&a);
-        //icvSubscribe_Remote("tcp://127.0.0.1:5555",&a);
+        //icvSubscribe("Random number",&a);
+        icvSubscribe_Remote("tcp://127.0.0.1:2000",&a);
         int b=a.getvalue();
          ICV_LOG_INFO<<"before : "<<b<<"  after : "<<3*b;
-    //    a=a*3;
-    //     rec1->setoutvalue(a);;
- 
-        
-    //     pub1->Send_Out(rec1);
+
     }
 }}

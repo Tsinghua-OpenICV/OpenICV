@@ -1,0 +1,9 @@
+Header header
+ld_Coeff[] lane_Coeff
+ld_LaneParam[] lane_Pixel
+ld_LaneParam[] lane_World
+float32 bias_dis
+float32 bias_theta
+float32 lane_width
+float32 curve_radius
+int8 cl_flag

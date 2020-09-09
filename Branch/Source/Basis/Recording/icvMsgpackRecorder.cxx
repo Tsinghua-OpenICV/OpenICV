@@ -21,24 +21,25 @@ namespace icv { namespace _impl
         // deserialize from file
         if (fs::exists(filepath))
         {
-
-            file_mapping fmap(filepath.string().c_str(), read_only);
+          file_mapping fmap(filepath.string().c_str(), read_only);
             mapped_region region(fmap, read_only);
 
-            //msgpack::object_handle result;
-		msgpack::unpacked msg;
-            msgpack::unpack(&msg, (char*)region.get_address(), region.get_size());
+            //msgpack::object_handle msg;
+		    msgpack::unpacked msg;
+            msgpack::unpack(msg, (char*)region.get_address(), region.get_size());
 
             auto obj = msg.get();
 
             auto header = obj.via.array.ptr[0].as<RecordHeader>();
-
+            
             header_.MaxTime=header.MaxTime;
             header_.MinTime=header.MinTime;
 
             //if (header.clock_synced) icvTime::sync(Duration64(header.clock_offset));
 
-            obj.via.array.ptr[1].convert(&_buffer);
+            obj.via.array.ptr[1].convert(_buffer);
+           
+           
         }
     }
 
@@ -87,21 +88,24 @@ namespace icv { namespace _impl
 
     void icvMsgpackRecorder::Record(const icvDataObject* data, const string& source)
     {
+       
         if(first_)
         {
             header_.MinTime=data->GetSourceTime();;
+            cout<<"the minimum time is "<<header_.MinTime<<endl;
             first_=false;
             start_record=icvTime::time_s();
         }  
         if (_buffer.find(source) == _buffer.end())
             _buffer[source] = std::vector<std::string>();
-
+        // mapStudent.insert(pair<int, string>(1, "student_one"));  
         stringstream ss;
         data->Serialize(ss, _version);
         temp_max=data->GetSourceTime();
+        //cout<<"The content is"<<ss.str()<<endl;
         _buffer[source].push_back(ss.str());
         header_.MaxTime=temp_max;
-        
+        cout<<"the maximum time is "<<header_.MaxTime<<endl;
         if((icvTime::time_s()-start_record)>2)
         {
             start_record=icvTime::time_s();
@@ -115,15 +119,18 @@ namespace icv { namespace _impl
     void icvMsgpackRecorder::PlayNext(icvDataObject* data, const string& source)
     {
         // TODO: add delay into recording and playback
-        // if (_buffer.find(source) == _buffer.end())
-        //  ICV_THROW_MESSAGE("Cannot find data records for source");
-
-        if (_bufferIdx.find(source) == _bufferIdx.end())
-            _bufferIdx[source]=0;
+         if (_buffer.find(source) == _buffer.end()){
+          ICV_THROW_MESSAGE("Cannot find data records for source");}
+        if (_bufferIdx.find(source) == _bufferIdx.end()){
+            _bufferIdx[source]=0;}
+        
+      
         stringstream ss(_buffer[source][_bufferIdx[source]]);
+       
         // ICV_LOG_INFO<<"READ FROM FILE LIST "<<source<<":  "<< _buffer[source][_bufferIdx[source]].length();
         if((_buffer[source].size()-_bufferIdx[source])>1) _bufferIdx[source] ++;
+   
         data->Deserialize(ss, _version);
-
+       
     }
 }}

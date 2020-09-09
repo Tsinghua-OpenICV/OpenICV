@@ -27,7 +27,8 @@ namespace icv
          struct ImageRecStruct
         {			
             string imagename;
-            MSGPACK_DEFINE(imagename);	
+            string another_name;
+            MSGPACK_DEFINE(imagename,another_name);	
         } ;
         public:
         icvCvMatData(int rows, int cols, int type) :
@@ -40,8 +41,8 @@ namespace icv
          _init_type(CV_8UC3), _init_sizes {400, 600} {
 
            Reserve();
-            }
-            icvCvMatData(UType data_ini)
+        }
+        icvCvMatData(UType data_ini):_init_type(CV_8UC3), _init_sizes {400, 600}
             {
                 Reserve();
 
@@ -63,7 +64,7 @@ namespace icv
         return *_data;
 
         }
-
+     
        virtual void Dispose() ICV_OVERRIDE
         {
             if (_data) delete _data;

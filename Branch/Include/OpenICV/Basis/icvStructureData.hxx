@@ -29,7 +29,8 @@ namespace icv { namespace data
         }
 
         icvStructureData(value_type & data_ini) {
-        setvalue();
+        _data =&data_ini;
+        //setvalue(&data_ini);
         }
         virtual void Reserve() ICV_OVERRIDE 
         {
@@ -49,7 +50,7 @@ namespace icv { namespace data
             if (_data) return sizeof(T);
             else return 0;
         }
-
+      
         // TODO: Not implemented yet
 
 
@@ -76,7 +77,7 @@ namespace icv { namespace data
             {
                 unpack(&result, buff.c_str(), len);
                 object obj = result.get();
-                 T temp_data; 
+                T temp_data; 
                 obj.convert(temp_data);
                 _data= &temp_data;
             }
@@ -154,12 +155,12 @@ namespace icv { namespace data
         {
             return *_data != rhs;
         }
-        MSGPACK_DEFINE(_data);
+        MSGPACK_DEFINE(* _data);
 
     protected:
         T * _data = ICV_NULLPTR;
        vector<T> _packdata;
-       //T temp_data;
+        //T temp_data;
 
     };
 

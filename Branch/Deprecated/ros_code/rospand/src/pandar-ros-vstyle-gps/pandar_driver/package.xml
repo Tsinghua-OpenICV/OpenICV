@@ -1,0 +1,42 @@
+<package>
+
+  <name>pandar_driver</name>
+  <version>1.0.0</version>
+  <description>
+    ROS device driver for pandar40 3D LIDARs.
+  </description>
+  <maintainer email="yangsheng@hesaitech.com">Yang Sheng</maintainer>
+  <author>Yang Sheng</author>
+  <license>BSD</license>
+
+  <url type="repository">https://github.com/HesaiTechnology/pandar_ros</url>
+  <url type="bugtracker">https://github.com/HesaiTechnology/pandar_ros/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>diagnostic_updater</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>libpcap</build_depend>
+  <build_depend>nodelet</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>pandar_msgs</build_depend>
+
+  <!-- these build dependencies are only needed for unit testing -->
+  <build_depend>roslaunch</build_depend>
+
+  <run_depend>diagnostic_updater</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>libpcap</run_depend>
+  <run_depend>nodelet</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>pandar_msgs</run_depend>
+
+  <export>
+	  <nodelet plugin="${prefix}/nodelet_pandar.xml"/>
+  </export>
+
+</package>

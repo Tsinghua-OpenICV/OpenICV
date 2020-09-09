@@ -22,7 +22,7 @@ message("binary==${OpenICV_ini_path}")
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/bin")
 message("installd==${CMAKE_INSTALL_RPATH}")
 
-set(BOOST_ROOT "/usr/local/boost")
+set(BOOST_ROOT "/usr/local/")
 set(BOOST_NO_SYSTEM_PATH true)
 #set(OpenCV_DIR "/usr/local/share/OpenCV")
 # Options
@@ -30,12 +30,12 @@ add_definitions(-DOPENICV_PREFER_BOOST)
 option(OPENICV_BUILD_EXAMPLES "Build examples" OFF)
 
 option(OPENICV_BUILD_TOOLS "Build built-in tools" ON)
-option(OPENICV_WITH_EIGEN "Build with Eigen extensions" OFF)
-option(OPENICV_WITH_OPENCV "Build with OpenCV extensions" OFF)
-option(OPENICV_WITH_PCL "Build with PCL extensions" OFF)
+option(OPENICV_WITH_EIGEN "Build with Eigen extensions" ON)
+option(OPENICV_WITH_OPENCV "Build with OpenCV extensions" ON)
+option(OPENICV_WITH_PCL "Build with PCL extensions" ON)
 
 
-option(OPENICV_R_BOOST "rebuild boost" OFF)
+option(OPENICV_R_BOOST "rebuild boost" ON)
 option(OPENICV_R_PCL "rebuild PCL" OFF)
 option(OPENICV_R_OPENCV "rebuild OPENCV" OFF)
 option(OPENICV_R_EIGEN "rebuild EIGEN" OFF)
@@ -45,7 +45,7 @@ if(OPENICV_ENABLE_REMOTE)
 add_definitions(-DOPENICV_ENABLE_REMOTE)
 endif()
 
-set( BOOST_VERSION_TB 72)
+set( BOOST_VERSION_TB 66)
 
 # Add cmake macros and functions
 set(CMAKE_MODULE_PATH "${OpenICV_SOURCE_DIR}/CMake/Modules/" ${CMAKE_MODULE_PATH})

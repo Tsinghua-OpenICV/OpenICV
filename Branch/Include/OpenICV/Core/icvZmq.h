@@ -28,11 +28,11 @@ public:
     ZMQ_Socket()
     {
 
-                    zmq_soc = NULL;
+                void*    zmq_soc = NULL;
 
-                    context_ = NULL;
+                void*    context_ = NULL;
 
-                    use_uniq_cont=false;
+                bool    use_uniq_cont=false;
 
     };
     ZMQ_Socket(void* context_i)
@@ -94,6 +94,7 @@ public:
             case ZMQ_REP:
             case ZMQ_PULL:
             case ZMQ_PUB:
+                
                 zmq_bind(zmq_soc, addr.c_str());
                 ICV_LOG_INFO<<"error of bind socket "<<zmq_strerror (errno);
 

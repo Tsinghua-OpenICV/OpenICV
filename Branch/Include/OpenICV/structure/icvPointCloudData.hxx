@@ -21,6 +21,7 @@ namespace icv
             icvPointCloudData(uint32_t count) : _init_width(count), _init_height(1) {}
             icvPointCloudData(uint32_t width, uint32_t height) : _init_width(width), _init_height(height) {}
             icvPointCloudData() : _init_width(100), _init_height(1) {Reserve();}
+            icvPointCloudData(UType data_ini) : _init_width(100), _init_height(1) {Reserve();setoutvalue(data_ini);}
 
             virtual void Reserve() ICV_OVERRIDE
             {
@@ -95,6 +96,7 @@ namespace icv
             operator const UType&() const { return *_data; }
            
             UType* operator->() { return _data; }
+            UType getvalue() { return *_data; }
             const UType* operator->() const { return _data; }
 
             icvPointCloudData<PointT>& operator = (const UType& data)

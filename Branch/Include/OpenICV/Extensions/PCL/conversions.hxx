@@ -3,7 +3,7 @@
 
 #include "OpenICV/Basis/icvPrimitiveArrayData.hxx"
 #include "OpenICV/Basis/icvPrimitiveTensorData.hxx"
-#include "OpenICV/Extensions/PCL/icvPointCloudData.hxx"
+#include "OpenICV/structure/icvPointCloudData.hxx"
 
 template <typename PointT>
 icv::icvPrimitiveArrayData<PointT>& operator=(icv::icvPrimitiveArrayData<PointT>& lhs, const pcl::PointCloud<PointT>& rhs);
