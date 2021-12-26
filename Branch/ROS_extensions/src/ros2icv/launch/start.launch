@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="ros2icv" name="ros2icv" type="ros2icv_node">
+    </node>
+ </launch>

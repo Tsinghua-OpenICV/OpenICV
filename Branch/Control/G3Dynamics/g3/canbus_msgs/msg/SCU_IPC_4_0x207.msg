@@ -1,0 +1,11 @@
+Header header
+
+uint8 SCU_IPC_ActVehLongAccelVD
+uint8 SCU_IPC_ActVehLateralAccelVD
+uint8 SCU_IPC_YAWVD
+float32 SCU_IPC_YAW
+float32 SCU_IPC_ActVehLongAccel
+float32 SCU_IPC_ActVehLateralAccel
+uint8 SCU_IPC_EPBSysSt
+uint8 SCU_IPC_4_MsgCounter
+uint8 SCU_IPC_4_Checksum

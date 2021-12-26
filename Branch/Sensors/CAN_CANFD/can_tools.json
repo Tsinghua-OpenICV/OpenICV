@@ -1,0 +1,13 @@
+{
+    "CANTOOLS":
+    {
+            "function": {
+    "name":"CANCANFD",            
+    "mode":"can",
+    "status":"-r",
+    "device_name":"can0"
+   
+        } 
+    }
+}
+    

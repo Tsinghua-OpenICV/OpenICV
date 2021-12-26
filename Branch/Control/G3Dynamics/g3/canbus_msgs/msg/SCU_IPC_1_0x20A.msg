@@ -1,0 +1,10 @@
+Header header
+
+uint8 SCU_IPC_SteeringAngleVD
+uint16 SCU_IPC_SteeringAngleSpd
+float32 SCU_IPC_SteeringAngle
+float32 SCU_IPC_ResponseTorque
+uint8 SCU_IPC_ResponseTorqueVD
+uint8 SCU_IPC_SteeringAngleSpdVD
+uint8 SCU_IPC_1_MsgCounter
+uint8 SCU_IPC_1_Checksum

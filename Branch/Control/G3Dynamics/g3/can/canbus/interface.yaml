@@ -1,0 +1,7 @@
+- name: /auto_state_node
+  publish: [/canbus/SCU_IPC_1, /canbus/SCU_IPC_2, /canbus/SCU_IPC_3, /canbus/SCU_IPC_4, 
+  /canbus/SCU_IPC_5, /canbus/SCU_IPC_6, /canbus/SCU_IPC_7]
+  subscribe: []
+- name: /auto_control_node
+  publish: []
+  subscribe: [/canbus/IPC_SCU_1, /canbus/IPC_SCU_2, /canbus/IPC_SCU_3]

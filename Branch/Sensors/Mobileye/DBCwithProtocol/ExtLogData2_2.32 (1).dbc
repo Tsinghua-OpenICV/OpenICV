@@ -1,0 +1,871 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ vtSig_NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ CA : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaneHeading : 0|12@1- (0.0005,0) [-1|1] "" Vector__XXX
+ SG_ LaneCurvature : 0|16@1- (3.81E-006,0) [-0.12|0.12] "1/m" Vector__XXX
+ SG_ LDW_Availability : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Lane_conf : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneType : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaneOffset : 0|12@1- (0.02,0) [-40.96|40.94] "m" Vector__XXX
+ SG_ LaneHeading : 0|12@1- (0.0005,0) [-1|1] "" Vector__XXX
+ SG_ LaneCurvature : 0|16@1- (3.81E-006,0) [-0.12|0.12] "1/m" Vector__XXX
+ SG_ LaneID : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaneValid : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LDW_Availability : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Lane_conf : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneType : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaneOffset : 0|12@1- (0.02,0) [-40.96|40.94] "m" Vector__XXX
+ SG_ LaneHeading : 0|12@1- (0.0005,0) [-1|1] "" Vector__XXX
+ SG_ LaneCurvature : 0|16@1- (3.81E-006,0) [-0.12|0.12] "1/m" Vector__XXX
+ SG_ LaneID : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaneValid : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Fixed_Yaw : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Fixed_Horizon : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Lane_Heading : 0|12@1- (0.0005,0) [-1.024|1.024] "" Vector__XXX
+ SG_ Lane_Curvature : 0|16@1- (3.81E-006,0) [-0.124846|0.124846] "1/m" Vector__XXX
+
+BO_ 1840 AHBC_Gradual_DataB: 2 Vector__XXX
+ SG_ ST_OBJ_DIST_HLB : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_BNDRY_DOM_NGL_RH_HLB : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_BNDRY_DOM_NGL_LH_HLB : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_BNDRY_DOM_BOT_NGL_HLB : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Busy_Scene : 11|1@1+ (1,0) [0|1] "ENUM" Vector__XXX
+ SG_ Too_Many_Cars : 10|1@1+ (1,0) [0|1] "ENUM" Vector__XXX
+ SG_ Right_Target_Change : 9|1@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Left_Target_Change : 8|1@1+ (1,0) [0|1] "ENUM" Vector__XXX
+
+BO_ 1847 Lane_Details: 8 Vector__XXX
+ SG_ Position_in_Lanes : 7|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Number_of_Lanes : 3|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Left_Guard_Rail : 26|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Right_Guard_Rail : 27|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Yaw_Angle : 32|16@1+ (0.0009765625,-31.999023438) [-31.999023438|32] "radians" Vector__XXX
+ SG_ Left_LDW_Availability : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Right_LDW_Availability : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pitch_Angle : 48|16@1+ (1.5259021897E-006,-0.05) [-0.05|0.05] "radians" Vector__XXX
+ SG_ construction_area : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1828 TSR4: 7 Vector__XXX
+ SG_ NoEntryVisionStatus : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Sign_Position_Z : 32|8@1- (0.5,0) [-16|16] "meters" Vector__XXX
+ SG_ Sign_Position_Y : 24|8@1- (0.5,0) [-32|31] "meters" Vector__XXX
+ SG_ Sign_Position_X : 16|8@1+ (0.5,0) [0|122] "meter" Vector__XXX
+ SG_ Vision_only_Supp_Sign_Type : 8|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type : 0|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+
+BO_ 1827 TSR3: 7 Vector__XXX
+ SG_ NoEntryVisionStatus : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Sign_Position_Z : 32|8@1- (0.5,0) [-16|16] "meters" Vector__XXX
+ SG_ Sign_Position_Y : 24|8@1- (0.5,0) [-32|31] "meters" Vector__XXX
+ SG_ Sign_Position_X : 16|8@1+ (0.5,0) [0|122] "meter" Vector__XXX
+ SG_ Vision_only_Supp_Sign_Type : 8|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type : 0|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+
+BO_ 1826 TSR2: 7 Vector__XXX
+ SG_ NoEntryVisionStatus : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Sign_Position_Z : 32|8@1- (0.5,0) [-16|16] "meters" Vector__XXX
+ SG_ Sign_Position_Y : 24|8@1- (0.5,0) [-32|31] "meters" Vector__XXX
+ SG_ Sign_Position_X : 16|8@1+ (0.5,0) [0|122] "meter" Vector__XXX
+ SG_ Vision_only_Supp_Sign_Type : 8|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type : 0|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+
+BO_ 1824 TSR0: 7 Vector__XXX
+ SG_ NoEntryVisionStatus : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Sign_Position_Z : 32|8@1- (0.5,0) [-16|16] "meters" Vector__XXX
+ SG_ Sign_Position_Y : 24|8@1- (0.5,0) [-32|31] "meters" Vector__XXX
+ SG_ Sign_Position_X : 16|8@1+ (0.5,0) [0|122] "meter" Vector__XXX
+ SG_ Vision_only_Supp_Sign_Type : 8|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type : 0|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+
+BO_ 1829 TSR5: 7 Vector__XXX
+ SG_ NoEntryVisionStatus : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Sign_Position_Z : 32|8@1- (0.5,0) [-16|16] "meters" Vector__XXX
+ SG_ Sign_Position_Y : 24|8@1- (0.5,0) [-32|31] "meters" Vector__XXX
+ SG_ Sign_Position_X : 16|8@1+ (0.5,0) [0|122] "meter" Vector__XXX
+ SG_ Vision_only_Supp_Sign_Type : 8|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type : 0|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+
+BO_ 1825 TSR1: 7 Vector__XXX
+ SG_ NoEntryVisionStatus : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Sign_Position_Z : 32|8@1- (0.5,0) [-16|16] "meters" Vector__XXX
+ SG_ Sign_Position_Y : 24|8@1- (0.5,0) [-32|31] "meters" Vector__XXX
+ SG_ Sign_Position_X : 16|8@1+ (0.5,0) [0|122] "meter" Vector__XXX
+ SG_ Vision_only_Supp_Sign_Type : 8|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type : 0|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+
+BO_ 1878 ObstacleDataC10: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1875 ObstacleDataC9: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1872 ObstacleDataC8: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1869 ObstacleDataC7: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1866 ObstacleDataC6: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1863 ObstacleDataC5: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1860 ObstacleDataC4: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1877 ObstacleDataB10: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1874 ObstacleDataB9: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1871 ObstacleDataB8: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1868 ObstacleDataB7: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1865 ObstacleDataB6: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1862 ObstacleDataB5: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1859 ObstacleDataB4: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1876 ObstacleDataA10: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1873 ObstacleDataA9: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1870 ObstacleDataA8: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1867 ObstacleDataA7: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1864 ObstacleDataA6: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1861 ObstacleDataA5: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1858 ObstacleDataA4: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1833 AHBC_Gradual: 7 Vector__XXX
+ SG_ OBJ_DIST_HLB_Right : 40|8@1+ (2,0) [0|400] "m" Vector__XXX
+ SG_ OBJ_DIST_HLB_Left : 48|8@1+ (2,0) [0|400] "m" Vector__XXX
+ SG_ OBJ_DIST_HLB : 32|8@1+ (2,0) [0|400] "m" Vector__XXX
+ SG_ BNDRY_DOM_NGL_RH_HLB : 20|12@1+ (0.1,-20) [-20|389.5] "" Vector__XXX
+ SG_ BNDRY_DOM_NGL_LH_HLB : 8|12@1+ (0.1,-20) [-20|389.5] "" Vector__XXX
+ SG_ BNDRY_DOM_BOT_NGL_HLB : 0|8@1+ (0.1,-10) [-10|15.5] "degree" Vector__XXX
+
+BO_ 1792 AWSDisplay: 8 Vector__XXX
+ SG_ Ped_in_DZ : 42|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Ped_FCW : 41|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ FCW_on : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DuskTimeIndicator : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HeadwayWarningLevel : 56|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LanesOn : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LeftLDWOn : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RightLDWOn : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LeftCrossing : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RightCrossing : 37|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Maintenance : 38|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Failsafe : 39|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HeadwayValid : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HeadwayMeasurement : 17|7@1+ (0.1,0) [0|9.9] "s" Vector__XXX
+ SG_ SoundType : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NightTimeIndicator : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Suppress : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1857 ObstacleDataC3: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1854 ObstacleDataC2: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1851 ObstacleDataC1: 8 Vector__XXX
+ SG_ Object_Accel_X : 32|10@1- (0.03,0) [-14.97|14.97] "m/s square" Vector__XXX
+ SG_ ObstacleAngle : 48|16@1- (0.01,0) [-327.68|327.68] "degree" Vector__XXX
+ SG_ ObstacleReplaced : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleScaleChange : 16|16@1- (0.0002,0) [-6.5534|6.5534] "pix/sec" Vector__XXX
+ SG_ ObstacleAngleRate : 0|16@1- (0.01,0) [-327.68|327.67] "degree" Vector__XXX
+
+BO_ 1856 ObstacleDataB3: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1853 ObstacleDataB2: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1850 ObstacleDataB1: 8 Vector__XXX
+ SG_ MatchedRadarID : 56|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RadarMatchConfidence : 52|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ RadarVelX : 40|12@1- (0.0625,0) [-128|128] "m/sec" Vector__XXX
+ SG_ RadarPosX : 28|12@1+ (0.0625,0) [0|255.938] "m" Vector__XXX
+ SG_ CIPVFlag : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ObstacleLane : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ObstacleAge : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ObstacleWidth : 8|8@1+ (0.05,0) [0|12.5] "m" Vector__XXX
+ SG_ ObstacleLenght : 0|8@1+ (0.5,0) [0|31.5] "m" Vector__XXX
+
+BO_ 1855 ObstacleDataA3: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1852 ObstacleDataA2: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1849 ObstacleDataA1: 8 Vector__XXX
+ SG_ Cut_in_and_Out : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BlinkerInfo : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleValid : 62|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleBrakeLights : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ObstacleStatus : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleType : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ObstacleVelX : 40|12@1- (0.0625,0) [-127.93|127.93] "m/sec" Vector__XXX
+ SG_ ObstaclePosY : 24|10@1- (0.0625,0) [-32|31.9375] "m" Vector__XXX
+ SG_ ObstaclePosX : 8|12@1+ (0.0625,0) [0|250] "m" Vector__XXX
+ SG_ ObstacleID : 0|8@1+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 1848 ObstacleStatus: 7 Vector__XXX
+ SG_ Failsafe : 40|13@1+ (1,0) [0|8191] "" Vector__XXX
+ SG_ Close_Car : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Go : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ProtocolVersion : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RightCloseRangeCutIn : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LeftCloseRangeCutIn : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ActiveVersionNumberSection : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ApplicationVersion : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Timestamp : 8|8@1+ (1,0) [0|255] "mSec" Vector__XXX
+ SG_ NumObstacles : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1832 HighLowBeam: 3 Vector__XXX
+ SG_ ReasonsToSwitchToLowBeam : 8|9@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BinaryHighLowBeamDecision : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1831 Vision_Only_TSR_continues: 8 Vector__XXX
+ SG_ Vision_only_supp_Sign_Type_D4 : 56|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Vision_only_supp_Sign_Type_D3 : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Vision_only_supp_Sign_Type_D2 : 24|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Vision_only_supp_Sign_Type_D1 : 8|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type_D4 : 48|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type_D3 : 32|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type_D2 : 16|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type_D1 : 0|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+
+BO_ 1830 TSR6: 7 Vector__XXX
+ SG_ NoEntryVisionStatus : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|255] "ENUM" Vector__XXX
+ SG_ Sign_Position_Z : 32|8@1- (0.5,0) [-16|16] "meters" Vector__XXX
+ SG_ Sign_Position_Y : 24|8@1- (0.5,0) [-32|31] "meters" Vector__XXX
+ SG_ Sign_Position_X : 16|8@1+ (0.5,0) [0|122] "meter" Vector__XXX
+ SG_ Vision_only_Supp_Sign_Type : 8|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+ SG_ Vision_only_Sign_Type : 0|8@1+ (1,0) [0|0] "ENUM" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 LaneHeading "Heading (b) parameter in equation : y=ax^2+bx+cHeading (b) parameter in equation : y=ax^2+bx+cHeading (b) parameter in equation : y=ax^2+bx+c";
+CM_ SG_ 3221225472 LaneCurvature "Curvature (a) parameter in equation : y=ax^2+bx+c
+road radius (r) from curvature (a) : r=1/(2*a)Invalid value: 10000h
+Curvature (a) parameter in equation : y=ax^2+bx+c
+road radius (r) from curvature (a) : r=1/(2*a)Invalid value: 10000h
+Curvature (a) parameter in equation : y=ax^2+bx+c
+road radius (r) from curvature (a) : r=1/(2*a)";
+CM_ SG_ 3221225472 LDW_Availability "0 stands for unavailable, 1 for available. 
+
+0 stands for unavailable, 1 for available. 
+
+";
+CM_ SG_ 3221225472 LaneOffset "Offset (c) parameter in equation : y=ax^2+bx+cOffset (c) parameter in equation : y=ax^2+bx+c";
+CM_ SG_ 3221225472 LaneID "Left Lane ID =1
+Right Lane ID = 0Left Lane ID =1
+Right Lane ID = 0";
+CM_ SG_ 1840 ST_BNDRY_DOM_NGL_RH_HLB "state of the right boundary of the glare free area";
+CM_ SG_ 1840 ST_BNDRY_DOM_NGL_LH_HLB "state of the left boundary of the glare free area";
+CM_ SG_ 1840 ST_BNDRY_DOM_BOT_NGL_HLB "state of the lower boundary of the glare free area";
+CM_ SG_ 1878 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1878 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1875 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1875 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1872 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1872 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1869 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1869 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1866 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1866 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1863 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1863 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1860 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1860 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1877 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1874 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1871 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1868 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1865 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1862 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1859 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1876 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1876 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1876 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1873 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1873 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1873 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1870 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1870 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1870 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1867 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1867 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1867 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1864 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1864 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1864 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1861 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1861 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1861 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1858 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1858 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1858 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1833 OBJ_DIST_HLB_Right "Range of the closest object ahead of the vehicle defining
+the lower boundary of the glare free area (GFA)";
+CM_ SG_ 1833 OBJ_DIST_HLB_Left "Range of the closest object ahead of the vehicle defining
+the lower boundary of the glare free area (GFA)";
+CM_ SG_ 1833 OBJ_DIST_HLB "Range of the closest object ahead of the vehicle defining
+the lower boundary of the glare free area (GFA)";
+CM_ SG_ 1833 BNDRY_DOM_NGL_RH_HLB "right boundary of the glare free area (GFA) in the image,
+given as angle with respect to the camera coordinate system";
+CM_ SG_ 1833 BNDRY_DOM_NGL_LH_HLB "left boundary of the glare free area (GFA) in the image,
+given as angle with respect to the camera coordinate system";
+CM_ SG_ 1833 BNDRY_DOM_BOT_NGL_HLB "lower boundary of the glare free area (GFA) in the image,
+given as angle with respect to the camera coordinate system";
+CM_ SG_ 1792 FCW_on "Meaning: There is an FCW warning on a vehicle.";
+CM_ SG_ 1792 DuskTimeIndicator "indicates if the system is in night mode";
+CM_ SG_ 1792 HeadwayWarningLevel "When no CIPV is present, HW Level = 0 (Off)
+When a CIPV is present with HW >1.0, HW Level = 1 (Green)
+When a CIPV is present with 0.6 > HW >1.0, HW Level = 2 (Orange)
+When a CIPV is present with HW < 0.6, HW Level = 3 (Red)";
+CM_ SG_ 1792 NightTimeIndicator "indicates if the system is in night mode";
+CM_ SG_ 1857 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1857 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1854 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1854 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1851 Object_Accel_X "The longitude acceleration of the object. 
+Type: 10 bit, signed integer 
+Range: -14.97 : 14.97 [m/s2]
+Conversion: (HEX)* 0.03
+Invalid value: 200h";
+CM_ SG_ 1851 ObstacleScaleChange "currently not in use
+always zero";
+CM_ SG_ 1856 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1853 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1850 CIPVFlag "0 - not CIPV
+1 - CIPV";
+CM_ SG_ 1855 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1855 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1855 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1852 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1852 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1852 ObstacleID "New obstacles are given the last used free ID";
+CM_ SG_ 1849 Cut_in_and_Out "The signal is based on our estimation of where the target is now relatively to the lanes, its rate of change, and our estimation of where it is going to be within one second.
+
+";
+CM_ SG_ 1849 ObstacleBrakeLights "0 = off or not identifined
+1 = on";
+CM_ SG_ 1849 ObstacleID "New obstacles are given the last used free ID";
+CM_ BO_ 1848 "Values:
+00000000 - No Failsafe
+00000001 - Low Sun
+00000010 - Blur Image
+00000100 - Smear Image
+00001000 - Partial Transparent Blockage
+00010000 - Full Blockage
+00100000 - Splashes
+01000000 - Out of Calibration
+10000000 - Impaired VD
+";
+CM_ SG_ 1848 Close_Car "Indication whether we detect a close car in front of the host vehicle or not.";
+CM_ SG_ 1848 Go "Currently this signal is implemented (Stop or Go are reported) only when the own vehicle is standing (having ego speed of less than 0.1 meters per second). Otherwise, the value 15 is reported.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 3221225472 CA 1 "Not CA" 0 "CA" ;
+VAL_ 3221225472 LaneType 6 "invalid" 5 "botts dots" 4 "double lane marks" 3 "road edge" 2 "none" 1 "solid" 0 "dashed" ;
+VAL_ 3221225472 LaneID 1 "left lane" 0 "right lane" ;
+VAL_ 3221225472 LaneValid 3 "invalid" 2 "valid lane" 1 "new lane" 0 "undefined" ;
+VAL_ 1840 ST_OBJ_DIST_HLB 3 "invalid" 2 "oncoming vehicle detected" 1 "preceding vehicle detected" 0 "no object detected" ;
+VAL_ 1840 ST_BNDRY_DOM_NGL_RH_HLB 3 "invalid" 2 "defined by oncoming vehicle" 1 "defined by preceding vehicle" 0 "no object detected" ;
+VAL_ 1840 ST_BNDRY_DOM_NGL_LH_HLB 3 "invalid" 2 "defined by oncoming vehicle" 1 "defined by preceding vehicle" 0 "no object detected" ;
+VAL_ 1840 ST_BNDRY_DOM_BOT_NGL_HLB 3 "invalid" 2 "defined by oncoming vehicle" 1 "defined by preceding vehicle" 0 "no object detected" ;
+VAL_ 1840 Right_Target_Change 1 "Target has changed" 0 "Target is the same as before" ;
+VAL_ 1840 Left_Target_Change 1 "Target has changed" 0 "Target is the same as before" ;
+VAL_ 1847 Left_Guard_Rail 1 "Guard rail detected" 0 "No guard rail detected" ;
+VAL_ 1847 Right_Guard_Rail 1 "Guard rail detected" 0 "No guard rail detected" ;
+VAL_ 1828 NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+VAL_ 1828 Filter_type 3 "Embedded" 2 "On vehicle/Truck" 1 "Irrelevant to the host driver" 0 "Not filtered" ;
+VAL_ 1828 Vision_only_Supp_Sign_Type 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1828 Vision_only_Sign_Type 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1827 NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+VAL_ 1827 Filter_type 3 "Embedded" 2 "On vehicle/Truck" 1 "Irrelevant to the host driver" 0 "Not filtered" ;
+VAL_ 1827 Vision_only_Supp_Sign_Type 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1827 Vision_only_Sign_Type 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1826 NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+VAL_ 1826 Filter_type 3 "Embedded" 2 "On vehicle/Truck" 1 "Irrelevant to the host driver" 0 "Not filtered" ;
+VAL_ 1826 Vision_only_Supp_Sign_Type 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1826 Vision_only_Sign_Type 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1824 NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+VAL_ 1824 Filter_type 3 "Embedded" 2 "On vehicle/Truck" 1 "Irrelevant to the host driver" 0 "Not filtered" ;
+VAL_ 1824 Vision_only_Supp_Sign_Type 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1824 Vision_only_Sign_Type 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1829 NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+VAL_ 1829 Filter_type 3 "Embedded" 2 "On vehicle/Truck" 1 "Irrelevant to the host driver" 0 "Not filtered" ;
+VAL_ 1829 Vision_only_Supp_Sign_Type 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1829 Vision_only_Sign_Type 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1825 NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+VAL_ 1825 Filter_type 3 "Embedded" 2 "On vehicle/Truck" 1 "Irrelevant to the host driver" 0 "Not filtered" ;
+VAL_ 1825 Vision_only_Supp_Sign_Type 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1825 Vision_only_Sign_Type 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1878 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1875 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1872 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1869 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1866 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1863 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1860 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1877 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1877 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1874 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1874 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1871 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1871 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1868 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1868 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1865 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1865 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1862 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1862 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1859 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1859 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1876 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1876 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1876 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1876 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1876 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1876 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1873 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1873 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1873 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1873 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1873 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1873 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1870 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1870 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1870 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1870 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1870 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1870 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1867 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1867 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1867 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1867 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1867 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1867 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1864 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1864 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1864 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1864 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1864 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1864 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1861 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1861 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1861 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1861 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1861 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1861 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1858 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1858 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1858 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1858 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1858 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1858 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1792 Ped_in_DZ 1 "ped is in danger zone" 0 "ped is not in a danger zone" ;
+VAL_ 1792 Ped_FCW 1 "There is an FCW warning" 0 "No FCW warning" ;
+VAL_ 1792 FCW_on 1 "There is an FCW warning" 0 "No FCW warning" ;
+VAL_ 1792 DuskTimeIndicator 1 "dusk mode" 0 "not in dusk mode" ;
+VAL_ 1792 HeadwayWarningLevel 3 "CIPV presents, HW < 0.6 (Red)" 2 "CIPV presents 0.6>HW>1.0 Orange" 1 "CIPV presents, HW >1.0 (Green)" 0 "no CIPV is present" ;
+VAL_ 1792 LanesOn 1 "LD algorithm ON" 0 "LD algorithm OFF (no speed)" ;
+VAL_ 1792 LeftLDWOn 1 "left LDW" 0 "no left LDW" ;
+VAL_ 1792 RightLDWOn 1 "right LDW" 0 "no right LDW" ;
+VAL_ 1792 LeftCrossing 1 "left crossing" 0 "no left crossing" ;
+VAL_ 1792 RightCrossing 1 "right crossing" 0 "no right crossing" ;
+VAL_ 1792 Maintenance 1 "internal error" 0 "no internal error" ;
+VAL_ 1792 Failsafe 1 "internal FailSafe mode " 0 "no internal FailSafe mode" ;
+VAL_ 1792 HeadwayValid 1 "valid" 0 "not valid" ;
+VAL_ 1792 SoundType 7 "Reserved" 6 "Hard FCW + Peds FCW" 5 "Soft FCW" 4 "Near_HW" 3 "Far_HW (=HW1/HW2/HW3)" 2 "LDWR" 1 "LDWL" 0 "silent" ;
+VAL_ 1792 NightTimeIndicator 1 "night mode" 0 "not in night mode" ;
+VAL_ 1792 Suppress 1 "new sound or suppressed sound" 0 "old sound" ;
+VAL_ 1857 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1854 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1851 ObstacleReplaced 1 "replaced in this frame" 0 "not replaced in this frame" ;
+VAL_ 1856 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1856 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1853 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1853 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1850 CIPVFlag 1 "CIPV" 0 "not CIPV" ;
+VAL_ 1850 ObstacleLane 3 "invalid" 2 "next lane (left or right)" 1 "ego lane" 0 "not assigned" ;
+VAL_ 1855 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1855 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1855 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1855 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1855 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1855 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1852 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1852 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1852 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1852 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1852 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1852 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1849 Cut_in_and_Out 4 "cut_out" 3 "cut_in" 2 "out_host_lane" 1 "in_host_lane" 0 "undefined" ;
+VAL_ 1849 BlinkerInfo 4 "both" 3 "right" 2 "left" 1 "off" 0 "unavailable" ;
+VAL_ 1849 ObstacleValid 2 "older valid" 1 "new valid (detected this frame)" ;
+VAL_ 1849 ObstacleBrakeLights 1 "object's brake lights are on" 0 "object's brake lights are off" ;
+VAL_ 1849 ObstacleStatus 6 "Unused" 5 "Parked never moved, BckLightsOff" 4 "Oncoming" 3 "moving" 2 "stopped (movable)" 1 "standing neverMoved bckLightsOn" 0 "not defined" ;
+VAL_ 1849 ObstacleType 4 "Bicycle" 3 "pedestrian" 2 "bike" 1 "truck" 0 "vehicle" ;
+VAL_ 1848 Failsafe 16 "Full Blockage" 64 "Out of Calibration" 32 "Splashes" 8 "Partial Transparent Blockage" 4 "Smear Image" 2 "Blur Image" 1 "Low Sun" 0 "No Failsafe" ;
+VAL_ 1848 Close_Car 1 "Close car exists" 0 "No close car" ;
+VAL_ 1848 Go 15 "Not Calculated" 14 "currently unused" 13 "currently unused" 12 "currently unused" 11 "currently unused" 10 "currently unused" 9 "currently unused" 8 "currently unused" 7 "currently unused" 6 "currently unused" 5 "currently unused" 4 "currently unused" 3 "Driver decision is required" 2 "Undecided" 1 "Go!" 0 "Stop" ;
+VAL_ 1848 RightCloseRangeCutIn 1 "right cut in " 0 "no right cut in" ;
+VAL_ 1848 LeftCloseRangeCutIn 1 "left cut in" 0 "no left cut in" ;
+VAL_ 1832 ReasonsToSwitchToLowBeam 256 "too many lights" 128 "delay (hysteresis)" 64 "HW mode " 32 "fog detection Identified on HLB" 16 "village detection" 8 "ambient light" 4 "speed limit" 2 "preceding vehicle" 1 "oncoming vehicle" 0 "no switch reason" ;
+VAL_ 1832 BinaryHighLowBeamDecision 3 "invalid" 2 "recommendation : high beam ON" 1 "recommendation : high beam OFF" 0 "no recommendation" ;
+VAL_ 1831 Vision_only_supp_Sign_Type_D4 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1831 Vision_only_supp_Sign_Type_D3 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1831 Vision_only_supp_Sign_Type_D2 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1831 Vision_only_supp_Sign_Type_D1 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1831 Vision_only_Sign_Type_D4 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1831 Vision_only_Sign_Type_D3 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1831 Vision_only_Sign_Type_D2 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1831 Vision_only_Sign_Type_D1 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+VAL_ 1830 NoEntryVisionStatus 4 "Second_Alert" 3 "Alert" 2 "Reject_Vision_Only " 1 "Delay" 0 "Notification" ;
+VAL_ 1830 Filter_type 3 "Embedded" 2 "On vehicle/Truck" 1 "Irrelevant to the host driver" 0 "Not filtered" ;
+VAL_ 1830 Vision_only_Supp_Sign_Type 255 "Invalid_supp" 22 "e_zone" 21 "e_rappel" 20 "Supp_sign_generic" 19 "Night" 18 "Hazardous_materials" 17 "Fog" 16 "Rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance_in" 11 "Weight" 10 "Distance_arrow ( distance for)" 9 "Truck" 8 "BendArrow_right" 7 "BendArrow_left" 6 "Arrow_right" 5 "Arrow_left" 4 "Time" 3 "Trailer" 2 "Snow" 1 "Rain" 0 "None" ;
+VAL_ 1830 Vision_only_Sign_Type 255 "e_invalid_sign " 254 "No sign detected" 221 "standard elect end of no passing" 220 "standard electr no passing start" 201 "regular end of no passing" 200 "regular no passing start" 176 "regular End of playground area" 175 "regular Playground area begin" 174 "standard regular end of ExprWay" 173 "standard regular exprWay begin" 172 "standard regular end of MotorWay" 171 "standard regular motorWay begin" 129 "standard electronic 145" 128 "standard electronic 135" 127 "standard electronic 125" 126 "standard electronic 115" 125 "standard electronic 105" 124 "standard electronic 95" 123 "standard electronic 85" 122 "standard electronic 75" 121 "standard electronic 65" 120 "standard electronic 55" 119 "standard electronic 45" 118 "standard electronic 35" 117 "standard electronic 25" 116 "standard electronic 15" 115 "standard electronic 5" 114 "standard regular 145" 113 "standard regular 135" 112 "standard regular 125" 111 "standard regular 115" 110 "standard regular 105" 109 "standard regular 95" 108 "standard regular 85" 107 "standard regular 75" 106 "standard regular 65" 105 "standard regular 55" 104 "standard regular 45" 103 "standard regular 35" 102 "standard regular 25" 101 "standard regular 15" 100 "standard regular 5" 65 "electric gen end all restriction" 64 "regular gen end all restrict" 50 "electronic end of num restrict" 41 "standard electronic 140" 40 "standard electronic 130" 39 "standard electronic 120" 38 "standard electronic 110" 37 "standard electronic 100" 36 "standard electronic 90" 35 "standard electronic 80" 34 "standard electronic 70" 33 "standard electronic 60" 32 "standard electronic 50" 31 "standard electronic 40" 30 "standard electronic 30" 29 "standard electronic 20" 28 "standard electronic 10" 20 "standard end of num restriction" 13 "standard regular 140" 12 "standard regular 130" 11 "standard regular 120" 10 "standard regular 110" 9 "standard regular 100" 8 "standard regular 90" 7 "standard regular 80" 6 "standard regular 70" 5 "standard regular 60" 4 "standard regular 50" 3 "standard regular 40" 2 "standard regular 30" 1 "standard regular 20" 0 "Standard regular 10" ;
+SIG_VALTYPE_ 3221225472 Fixed_Yaw : 1;
+SIG_VALTYPE_ 3221225472 Fixed_Horizon : 1;
+

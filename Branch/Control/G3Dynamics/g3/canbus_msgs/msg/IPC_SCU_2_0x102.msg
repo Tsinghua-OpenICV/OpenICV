@@ -1,0 +1,12 @@
+Header header
+
+float32 IPC_SCU_MotorTorqReq
+uint8 IPC_SCU_MotorTorqReqVD
+uint8 IPC_SCU_ParkingReqToEPBVD
+uint8 IPC_SCU_ParkingReqToEPB
+float32 IPC_SCU_AccDecelReq
+uint8 IPC_SCU_AccDecelReqVD
+float32 IPC_SCU_VehSpd
+uint8 IPC_SCU_VehSpdVD
+uint8 IPC_SCU_2_MsgCounter
+uint8 IPC_SCU_2_Checksum

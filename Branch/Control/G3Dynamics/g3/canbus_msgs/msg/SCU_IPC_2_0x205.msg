@@ -1,0 +1,10 @@
+Header header
+
+float32 SCU_IPC_FLWheelSpd
+float32 SCU_IPC_FRWheelSpd
+float32 SCU_IPC_RLWheelSpd
+float32 SCU_IPC_RRWheelSpd
+uint8 SCU_IPC_FLWheelSpdVD
+uint8 SCU_IPC_FRWheelSpdVD
+uint8 SCU_IPC_RLWheelSpdVD
+uint8 SCU_IPC_RRWheelSpdVD

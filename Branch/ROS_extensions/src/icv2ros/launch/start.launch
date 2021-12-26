@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="icv2ros" name="icv2ros" type="icv2ros_node">
+    </node>
+ </launch>

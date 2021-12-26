@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>canbus</name>
+  <version>0.0.1</version>
+  <description>The canbus package</description>
+  <maintainer email="yafei.sun@novauto.com.cn">zhu yong</maintainer>
+  <license>GPLv2</license>
+  <author email="yafei.sun@novauto.com.cn">zhu yong</author>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>canbus_msgs</build_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>canbus_msgs</exec_depend>
+
+  <export>
+  </export>
+</package>

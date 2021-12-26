@@ -1,0 +1,10 @@
+Header header
+
+uint16 SCU_IPC_dstBat_Dsp
+uint8 SCU_IPC_AccPedalSig
+uint8 SCU_IPC_BrkPedalSt
+uint8 SCU_IPC_BrkPedalStVD
+uint8 SCU_IPC_CurrentGearLevVD
+uint8 SCU_IPC_CurrentGearLev
+uint8 SCU_IPC_6_MsgCounter
+uint8 SCU_IPC_6_Checksum

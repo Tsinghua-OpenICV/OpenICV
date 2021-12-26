@@ -1,0 +1,8 @@
+<launch>
+  <node name="auto_control" pkg="canbus" type="auto_control_node" output="screen">
+  <rosparam file="$(find canbus)/conf.yaml"/>
+  </node>
+  <node name="auto_state" pkg="canbus" type="auto_state_node" output="screen">
+  </node>
+
+</launch>

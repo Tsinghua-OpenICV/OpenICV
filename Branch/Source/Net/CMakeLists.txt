@@ -1,2 +1,0 @@
-add_subdirectory(UDP_Function)
-add_subdirectory(RemoteCom)

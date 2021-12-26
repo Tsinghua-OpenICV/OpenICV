@@ -1,0 +1,305 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ME_AWS_CANA
+VAL_TABLE_ filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;
+VAL_TABLE_ Supplementary_signs_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_TABLE_ Vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_TABLE_ bool 1 "on" 0 "off" ;
+VAL_TABLE_ HW_warning_level 2 "CIPV<= HW COFIGURATION" 1 "CIPV >HW configuration " 0 "No CIPV in frame" ;
+VAL_TABLE_ TSR_warning 3 "speed vehicle > road speed+30" 2 "speed vehicle > road speed+20" 1 "speed vehicle > road speed+10" 0 "speed vehicle <= road speed+10" ;
+VAL_TABLE_ ped 3 "PCW" 2 "Pedestrian in danger zone" 0 "No pedestrian" ;
+VAL_TABLE_ error_code 60 "Er-60" 50 "Er-50" 41 "Er-41" 40 "Er-40" 35 "Er-35" 34 "Er-34" 33 "Er-33" 32 "Er-32" 31 "Er-31" 30 "Er-30" 22 "Er-22" 21 "Er-21" 20 "Er-20" 10 "Er-10" ;
+VAL_TABLE_ HW_measurment 25 "HW=2.5" 20 "HW=2.0" 18 "HW=1.8" 16 "HW=1.6" 14 "HW=1.4" 12 "HW=1.2" 10 "HW=1.0" 9 "HW=0.9" 8 "HW=0.8" 7 "HW=0.7" 6 "HW=0.6" 5 "HW=0.5" 4 "HW=0.4" 3 "HW=0.3" 2 "HW=0.2" 1 "HW=0.1" ;
+VAL_TABLE_ Bool 1 "ON" 0 "OFF" ;
+VAL_TABLE_ Time_indicator 3 "Not in use" 2 "Night" 1 "Dusk" 0 "Day" ;
+VAL_TABLE_ Sound_type 7 "Pedestrian in DZ" 6 "FCW\PCW" 5 "Soft FCW \Virtual bumper" 4 "TSR Warning" 3 "HW" 2 "Right LDW" 1 "Left LDW" 0 "No sound" ;
+VAL_TABLE_ Lane_conf 3 "very good lane conf" 2 "godd lane conf" 1 "bad lane conf" 0 "No lane conf" ;
+VAL_TABLE_ LDW_availability 1 "available" 0 "unavalable" ;
+VAL_TABLE_ Lane_type 6 "Invalid" 5 "Bott's Dots" 4 "Double Lane Mark" 3 "Road edge" 2 "None" 1 "Solid" 0 "Dashed" ;
+
+
+BO_ 1641 AfterMarket_ext: 8 Vector__XXX
+ SG_ LDW_availability_right : 42|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ LDW_availability_left : 2|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Lane_type_right : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Lane_type_left : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Lane_conf_right : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Lane_conf_left : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ distance_to_lane_R : 52|12@1- (0.02,0) [-40|40] "meters" Vector__XXX
+ SG_ distance_to_lane_L : 12|12@1- (0.02,0) [-40|40] "meters" Vector__XXX
+
+BO_ 1888 signal_car: 8 Vector__XXX
+ SG_ Wipers_availabled : 11|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ HighBeam_availabled : 13|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ LowBeam_availabled : 12|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Brakes : 0|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Left_blink : 1|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ right_blink : 2|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ wippers : 3|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ LowBeam : 4|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ HighBeam : 5|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ reserved1 : 14|2@1- (1,0) [0|1] "" Vector__XXX
+ SG_ reserved2 : 6|2@1- (1,0) [0|1] "" Vector__XXX
+ SG_ reserved3 : 8|3@1- (1,0) [0|3] "" Vector__XXX
+ SG_ speed : 16|8@1+ (1,0) [0|255] "km\h" Vector__XXX
+ SG_ reserved : 24|40@1- (1,0) [0|255] "" Vector__XXX
+
+BO_ 1792 AWS: 8 ME_AWS_CANA
+ SG_ reserved5 : 59|5@1- (1,0) [0|23] "" Vector__XXX
+ SG_ reserved4 : 52|4@1- (1,0) [0|4] "" Vector__XXX
+ SG_ reserved2 : 36|2@1- (1,0) [0|0] "" Vector__XXX
+ SG_ reserved2 : 40|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ reserved : 8|5@1- (1,0) [0|0] "" Vector__XXX
+ SG_ reserved : 5|3@1- (1,0) [0|0] "" Vector__XXX
+ SG_ TSR_warning_level : 48|3@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TSR_enabbled : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Rainy_HW_enabled : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Rain_HW : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PCW_PedDZ : 41|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HW_Warning_level : 56|2@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ HW_repeatable_enabled : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ General_pedestrian : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Blinker_reminder_enabled : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Blinker_reminder : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FCW_on : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RLDW_on : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LLDW_on : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LDW_off : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Maintenance : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fail_safe : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Error_code : 25|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Error_Active : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Headway_measurement : 17|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Headway_valid : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FLA_Armed : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hi_Low_BeamControl : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zero_speed : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ time_indicator : 3|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Sound_type : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 1831 Vision_only_TSR: 8 Vector__XXX
+ SG_ Sign_type_4 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_type_3 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_type_2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_type_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type_4 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type_3 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type_2 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type_1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1830 TSR_detail_7: 8 Vector__XXX
+ SG_ vision_only_sign_type : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_pos_Z : 32|8@1- (0.5,0) [-16|16] "" Vector__XXX
+ SG_ Sign_pos_Y : 24|8@1- (0.5,0) [-32|31] "" Vector__XXX
+ SG_ Sign_pos_X : 16|8@1+ (0.5,0) [0|122] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1829 TSR_detail_6: 8 Vector__XXX
+ SG_ vision_only_sign_type : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_pos_Z : 32|8@1- (0.5,0) [-16|16] "" Vector__XXX
+ SG_ Sign_pos_Y : 24|8@1- (0.5,0) [-32|31] "" Vector__XXX
+ SG_ Sign_pos_X : 16|8@1+ (0.5,0) [0|122] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1828 TSR_detail_5: 8 Vector__XXX
+ SG_ vision_only_sign_type : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_pos_Z : 32|8@1- (0.5,0) [-16|16] "" Vector__XXX
+ SG_ Sign_pos_Y : 24|8@1- (0.5,0) [-32|31] "" Vector__XXX
+ SG_ Sign_pos_X : 16|8@1+ (0.5,0) [0|122] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1827 TSR_detail_4: 8 Vector__XXX
+ SG_ vision_only_sign_type : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_pos_Z : 32|8@1- (0.5,0) [-16|16] "" Vector__XXX
+ SG_ Sign_pos_Y : 24|8@1- (0.5,0) [-32|31] "" Vector__XXX
+ SG_ Sign_pos_X : 16|8@1+ (0.5,0) [0|122] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1826 TSR_detail_3: 8 Vector__XXX
+ SG_ vision_only_sign_type : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_pos_Z : 32|8@1- (0.5,0) [-16|16] "" Vector__XXX
+ SG_ Sign_pos_Y : 24|8@1- (0.5,0) [-32|31] "" Vector__XXX
+ SG_ Sign_pos_X : 16|8@1+ (0.5,0) [0|122] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1825 TSR_detail_2: 8 Vector__XXX
+ SG_ vision_only_sign_type : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_pos_Z : 32|8@1- (0.5,0) [-16|16] "" Vector__XXX
+ SG_ Sign_pos_Y : 24|8@1- (0.5,0) [-32|31] "" Vector__XXX
+ SG_ Sign_pos_X : 16|8@1+ (0.5,0) [0|122] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1824 TSR_detail_1: 8 Vector__XXX
+ SG_ vision_only_sign_type : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Supplementary_sign_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Sign_pos_Z : 32|8@1- (0.5,0) [-16|16] "" Vector__XXX
+ SG_ Sign_pos_Y : 24|8@1- (0.5,0) [-32|31] "" Vector__XXX
+ SG_ Sign_pos_X : 16|8@1+ (0.5,0) [0|122] "" Vector__XXX
+ SG_ Filter_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ SG_ 1888 Wipers_availabled "When signal availabled the bit is on";
+CM_ SG_ 1888 HighBeam_availabled "When signal availabled the bit is on";
+CM_ SG_ 1888 LowBeam_availabled "When signal availabled the bit is on";
+CM_ SG_ 1888 Brakes "When signal is on the bit is on";
+CM_ SG_ 1888 Left_blink "When signal is on the bit is on";
+CM_ SG_ 1888 right_blink "When signal is on the bit is on";
+CM_ SG_ 1888 LowBeam "when signal is on the bit is on";
+CM_ SG_ 1888 HighBeam "When signal is on the bit is on";
+CM_ SG_ 1792 TSR_enabbled "When TSR feature is enabled the bit is on";
+CM_ SG_ 1792 Rainy_HW_enabled "When the feature is active the bit is on";
+CM_ SG_ 1792 Rain_HW "When rainy HW warning and rainy HW enabled the bit is on ";
+CM_ SG_ 1792 HW_Warning_level "When HW configuration <= 0.6 and CIPV <= 0.6 headway warning level =2";
+CM_ SG_ 1792 HW_repeatable_enabled "When HW repeatable feature is active the bit is on";
+CM_ SG_ 1792 General_pedestrian "When pedestrian or bicycle are detected in the frame in all instance the bit is on";
+CM_ SG_ 1792 Blinker_reminder_enabled "When the feature is active the bit is on";
+CM_ SG_ 1792 Blinker_reminder "When warning and feature is active the bit is on";
+CM_ SG_ 1792 FCW_on "When FCW bit is on";
+CM_ SG_ 1792 RLDW_on "When Right LDW the bit is on during the warning";
+CM_ SG_ 1792 LLDW_on "When left LDW the bit is on during the warning";
+CM_ SG_ 1792 LDW_off "When low speed ,low confidence lanes or configuration off the bit is on";
+CM_ SG_ 1792 Maintenance "Indicator of internal error
+1=error
+0=no error";
+CM_ SG_ 1792 Error_Active "When error active bit is off";
+CM_ SG_ 1792 Headway_measurement "If speed >=30 and Headway valid on
+When HW measurment >2.5  then HW measurment =0";
+CM_ SG_ 1792 Headway_valid "Speed >=30 and CIPV";
+CM_ SG_ 1792 FLA_Armed "On :FLA armed and ready to work
+";
+CM_ SG_ 1792 Hi_Low_BeamControl "ON : FLA is armed and decision Highbeam is on";
+CM_ SG_ 1792 time_indicator "0     Day
+1     Dusk
+2     Night
+3     not in use";
+CM_ SG_ 1792 Sound_type "0                Silent
+1                LDWL
+2                LDWR
+3                HW
+4                TSR warning (level 1,2,3)
+5                Soft FCW
+6                Hard FCW + Peds FCW
+7                 Pedestrian in DZ";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+VAL_ 1641 LDW_availability_right 1 "available" 0 "unavalable" ;
+VAL_ 1641 LDW_availability_left 1 "available" 0 "unavalable" ;
+VAL_ 1641 Lane_type_right 6 "Invalid" 5 "Bott's Dots" 4 "Double Lane Mark" 3 "Road edge" 2 "None" 1 "Solid" 0 "Dashed" ;
+VAL_ 1641 Lane_type_left 6 "Invalid" 5 "Bott's Dots" 4 "Double Lane Mark" 3 "Road edge" 2 "None" 1 "Solid" 0 "Dashed" ;
+VAL_ 1641 Lane_conf_right 3 "very good lane conf" 2 "godd lane conf" 1 "bad lane conf" 0 "No lane conf" ;
+VAL_ 1641 Lane_conf_left 3 "very good lane conf" 2 "godd lane conf" 1 "bad lane conf" 0 "No lane conf" ;
+VAL_ 1888 Wipers_availabled 1 "on" 0 "off" ;
+VAL_ 1888 HighBeam_availabled 1 "on" 0 "off" ;
+VAL_ 1888 LowBeam_availabled 1 "on" 0 "off" ;
+VAL_ 1888 Brakes 1 "on" 0 "off" ;
+VAL_ 1888 Left_blink 1 "on" 0 "off" ;
+VAL_ 1888 right_blink 1 "on" 0 "off" ;
+VAL_ 1888 wippers 1 "on" 0 "off" ;
+VAL_ 1888 LowBeam 1 "on" 0 "off" ;
+VAL_ 1888 HighBeam 1 "on" 0 "off" ;
+VAL_ 1792 TSR_warning_level 3 "speed vehicle > road speed+30" 2 "speed vehicle > road speed+20" 1 "speed vehicle > road speed+10" 0 "speed vehicle <= road speed+10" ;
+VAL_ 1792 TSR_enabbled 1 "ON" 0 "OFF" ;
+VAL_ 1792 Rainy_HW_enabled 1 "ON" 0 "OFF" ;
+VAL_ 1792 Rain_HW 1 "ON" 0 "OFF" ;
+VAL_ 1792 PCW_PedDZ 3 "PCW" 2 "Pedestrian in danger zone" 0 "No pedestrian" ;
+VAL_ 1792 HW_Warning_level 2 "CIPV<= HW COFIGURATION" 1 "CIPV >HW configuration " 0 "No CIPV in frame" ;
+VAL_ 1792 HW_repeatable_enabled 1 "ON" 0 "OFF" ;
+VAL_ 1792 General_pedestrian 1 "ON" 0 "OFF" ;
+VAL_ 1792 Blinker_reminder_enabled 1 "ON" 0 "OFF" ;
+VAL_ 1792 Blinker_reminder 1 "ON" 0 "OFF" ;
+VAL_ 1792 FCW_on 1 "ON" 0 "OFF" ;
+VAL_ 1792 RLDW_on 1 "ON" 0 "OFF" ;
+VAL_ 1792 LLDW_on 1 "ON" 0 "OFF" ;
+VAL_ 1792 LDW_off 1 "ON" 0 "OFF" ;
+VAL_ 1792 Maintenance 1 "ON" 0 "OFF" ;
+VAL_ 1792 Fail_safe 1 "ON" 0 "OFF" ;
+VAL_ 1792 Error_code 60 "Er-60" 50 "Er-50" 41 "Er-41" 40 "Er-40" 35 "Er-35" 34 "Er-34" 33 "Er-33" 32 "Er-32" 31 "Er-31" 30 "Er-30" 22 "Er-22" 21 "Er-21" 20 "Er-20" 10 "Er-10" ;
+VAL_ 1792 Error_Active 1 "ON" 0 "OFF" ;
+VAL_ 1792 Headway_measurement 25 "HW=2.5" 20 "HW=2.0" 18 "HW=1.8" 16 "HW=1.6" 14 "HW=1.4" 12 "HW=1.2" 10 "HW=1.0" 9 "HW=0.9" 8 "HW=0.8" 7 "HW=0.7" 6 "HW=0.6" 5 "HW=0.5" 4 "HW=0.4" 3 "HW=0.3" 2 "HW=0.2" 1 "HW=0.1" ;
+VAL_ 1792 Headway_valid 1 "ON" 0 "OFF" ;
+VAL_ 1792 FLA_Armed 1 "ON" 0 "OFF" ;
+VAL_ 1792 Hi_Low_BeamControl 1 "ON" 0 "OFF" ;
+VAL_ 1792 Zero_speed 1 "ON" 0 "OFF" ;
+VAL_ 1792 time_indicator 3 "Not in use" 2 "Night" 1 "Dusk" 0 "Day" ;
+VAL_ 1792 Sound_type 7 "Pedestrian in DZ" 6 "FCW\PCW" 5 "Soft FCW \Virtual bumper" 4 "TSR Warning" 3 "HW" 2 "Right LDW" 1 "Left LDW" 0 "No sound" ;
+VAL_ 1831 Sign_type_4 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1831 Sign_type_3 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1831 Sign_type_2 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1831 Sign_type_1 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1831 Supplementary_sign_type_4 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1831 Supplementary_sign_type_3 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1831 Supplementary_sign_type_2 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1831 Supplementary_sign_type_1 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1830 vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1830 Supplementary_sign_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1830 Filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;
+VAL_ 1829 vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1829 Supplementary_sign_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1829 Filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;
+VAL_ 1828 vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1828 Supplementary_sign_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1828 Filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;
+VAL_ 1827 vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1827 Supplementary_sign_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1827 Filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;
+VAL_ 1826 vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1826 Supplementary_sign_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1826 Filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;
+VAL_ 1825 vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1825 Supplementary_sign_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1825 Filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;
+VAL_ 1824 vision_only_sign_type 255 "e_invalid_sign" 254 "No sign detected" 221 "End of no passing electronic" 220 "No passing start electronic" 201 "end of no passing" 200 "No passing start regular" 176 "Playground area end" 175 "Playfround area begin" 174 "ExpressWay end" 173 "ExpressWay begin" 172 "MotorWay end" 171 "MotorWay begin" 129 "standard electroni 145 km\h mp\h" 128 "standard electroni 135 km\h mp\h" 127 "standard electroni 125 km\h mp\h" 126 "standard electroni 115 km\h mp\h" 125 "standard electroni 105 km\h mp\h" 124 "standard electronic 95 km\h mp\h" 123 "standard electronic 85 km\h mp\h" 122 "standard electronic 75 km\h mp\h" 121 "standard electronic 65 km\h mp\h" 120 "standard electronic 55 km\h mp\h" 119 "standard electronic 45 km\h mp\h" 118 "standard electronic 35 km\h mp\h" 117 "standard electronic 25 km\h mp\h" 116 "standard electronic 15 km\h mp\h" 115 "standard electronic 5 km\h mp\h" 114 "standard regular 145 km\h mp\h" 113 "standard regular 135 km\h mp\h" 112 "standard regular 125 km\h mp\h" 111 "standard regular 115 km\h mp\h" 110 "standard regular 105 km\h mp\h" 109 "standard regular 95 km\h mp\h" 108 "standard regular 85 km\h mp\h" 107 "standard regular 75 km\h mp\h" 106 "standard regular 65 km\h mp\h" 105 "standard regular 55 km\h mp\h" 104 "standard regular 45 km\h mp\h" 103 "standard regular 35 km\h mp\h" 102 "standard regular 25 km\h mp\h" 101 "standard regular 15 km\h mp\h" 100 "standard regular 5 km\h mp\h" 65 "End all restriction electronic" 64 "End all restriction regular" 50 "end of number standard electroni" 41 "standard electronic 140 km\h" 40 "standard electronic 130 km\h" 39 "standard electronic 120 km\h" 38 "standard electronic 110 km\h" 37 "standard electronic 100 km\h" 36 "standard electronic 90 km\h" 35 "standard electronic 80 km\h" 34 "standard electronic 70 km\h" 33 "standard electronic 60 km\h" 32 "standard electronic 50 km\h" 31 "standard electronic 40 km\h" 30 "standard electronic 30 km\h" 29 "standard electronic 20 km\h" 28 "standard electronic 10 km\h" 20 "end of number standard regular" 13 "standard regular 140 km\h" 12 "standard regular 130 km\h" 11 "standard regular 120 km\h" 10 "standard regular 110 km\h" 9 "standard regular 100 km\h" 8 "standard regular 90 km\h" 7 "standard regular 80 km\h" 6 "standard regular 70 km\h" 5 "standard regular 60 km\h" 4 "standard regular 50 km\h" 3 "standard regular 40 km\h" 2 "standard regular 30 km\h" 1 "standard regular 20 km\h" 0 "standard regular 10 km\h" ;
+VAL_ 1824 Supplementary_sign_type 255 "invalid supp" 20 "Supp sign generic" 19 "Night" 18 "Hazardous meterials" 0 "none" 17 "Fog" 16 "rain_cloud" 15 "School" 14 "Snow_rain" 13 "Tractor" 12 "Distance in" 11 "Weight" 10 "Distance arow (dist. for)" 9 "Truck" 8 "BendArrow right" 7 "BendArriow left" 6 "Arrow right" 5 "Arrow left" 4 "Time" 3 "trailer" 2 "Snow" 1 "Rain" ;
+VAL_ 1824 Filter_type 3 "embedded" 2 "on vehicle/truck" 1 "irrelevant to the host" 0 "not filtered" ;

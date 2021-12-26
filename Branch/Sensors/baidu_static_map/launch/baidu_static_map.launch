@@ -1,0 +1,23 @@
+<!-- -->
+<launch>
+  <arg name="map_path" 
+      default="$(find baidu_static_map)/conf/base_map.bin" />
+  <arg name="pose_topic" 
+      default="/zzz/navigation/ego_pose" />
+  <arg name="map_output_topic" 
+      default="/zzz/navigation/local_static_map" />
+  <arg name="static_map_conf" 
+      default="$(find baidu_static_map)/conf/road.yaml" />
+
+  <node pkg="baidu_static_map" 
+      type="baidu_static_map" 
+      name="baidu_static_map" 
+      output="screen">
+    <param name="map_path" value="$(arg map_path)" />
+    <param name="pose_topic" value="$(arg pose_topic)" />
+    <param name="map_output_topic" value="$(arg map_output_topic)" />
+    <param name="static_map_conf" value="$(arg static_map_conf)" />
+  </node>
+
+
+</launch>

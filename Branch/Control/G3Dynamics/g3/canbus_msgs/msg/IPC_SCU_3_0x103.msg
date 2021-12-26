@@ -1,0 +1,10 @@
+Header header
+
+uint8 IPC_SCU_LowBeamSWSt
+uint8 IPC_SCU_LowBeamSWStVD
+uint8 IPC_SCU_HighBeamSWSt
+uint8 IPC_SCU_HighBeamSWStVD
+uint8 IPC_SCU_HazardLampSWSt
+uint8 IPC_SCU_LTurnLampSWSt
+uint8 IPC_SCU_RTurnLampSWSt
+uint8 IPC_SCU_HorndriverSWst

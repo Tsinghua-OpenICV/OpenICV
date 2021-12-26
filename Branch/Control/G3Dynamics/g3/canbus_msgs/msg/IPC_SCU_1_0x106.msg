@@ -1,0 +1,12 @@
+Header header
+
+uint8 IPC_SCU_DBWReq
+uint8 IPC_SCU_ReadyReq
+uint8 IPC_SCU_BrakeLight
+float32 IPC_SCU_SteerAngleReq
+uint8 IPC_SCU_SteerAngleReqVD
+float32 IPC_SCU_TorsionBarTqReq
+uint8 IPC_SCU_TorsionBarTqReqVD
+uint8 IPC_SCU_GearReq
+uint8 IPC_SCU_1_MsgCounter
+uint8 IPC_SCU_1_Checksum
