@@ -1,4 +1,4 @@
-#ifndef icvStructureData_hxx
+ #ifndef icvStructureData_hxx
 #define icvStructureData_hxx
 
 #include <boost/static_assert.hpp>

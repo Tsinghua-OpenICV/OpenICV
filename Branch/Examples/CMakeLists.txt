@@ -5,4 +5,4 @@ endif()
 
 add_subdirectory(UsefulFunction)
 
-add_subdirectory(HelloPython)
+#add_subdirectory(HelloPython)

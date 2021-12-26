@@ -20,8 +20,8 @@
 #include "OpenICV/Core/icvZmq.h"
 namespace icv { namespace core
 {
-    class icvSubscriber;
-    class icvPublisher;
+    class icvSubscriberInterface;
+    class icvPublisherInterface;
     class icvFunction; 
     class icvNodeManager;
 
@@ -55,11 +55,11 @@ namespace icv { namespace core
 
         virtual void Progress() = 0;
         virtual void Abort() = 0;
-        void Trigger(icvPublisher* caller) ;
+        void Trigger(icvPublisherInterface* caller) ;
         void syncLoop();
         std::string get_nodename(){return nodename_;};
-        std::vector<icvSubscriber*> GetInputPorts(){return _inputPorts;}
-        std::vector<icvPublisher*> GetOutputPorts(){return _outputPorts;}
+        std::vector<icvSubscriberInterface*> GetInputPorts(){return _inputPorts;}
+        std::vector<icvPublisherInterface*> GetOutputPorts(){return _outputPorts;}
         icvNodeManager* GetMonitor(){return monitor_;}
     protected:
         virtual void Run();
@@ -67,8 +67,8 @@ namespace icv { namespace core
         icvMetaData _information;
 
         // TODO: change to icvSubscriber* icvPublisher*
-        std::vector<icvSubscriber*> _inputPorts;
-        std::vector<icvPublisher*> _outputPorts;
+        std::vector<icvSubscriberInterface*> _inputPorts;
+        std::vector<icvPublisherInterface*> _outputPorts;
         int _num_in=10,_num_out=5;
         int micro_Sec_loop;
         icvSemaphore* timesync_;
@@ -79,17 +79,17 @@ namespace icv { namespace core
         icvNodeManager* monitor_;
 
     public:
-        friend class icvSubscriber;
-        friend class icvPublisher;
+        // friend class icvSubscriber;
+        // friend class icvPublisher; //for temp test
 
-        private:
+    private:
         bool active_=true;
     };
 
     void Connect(icvNode::Ptr producer, int producerPort, icvNode::Ptr consumer, int consumerPort);
     void Disconnect(icvNode::Ptr producer, int producerPort, icvNode::Ptr consumer, int consumerPort);
-    void Connect(icvSubscriber* input, icvPublisher* output);
-    void Disconnect(icvSubscriber* input, icvPublisher* output);
+    void Connect(icvSubscriberInterface* input, icvPublisherInterface* output);
+    void Disconnect(icvSubscriberInterface* input, icvPublisherInterface* output);
 
 
 

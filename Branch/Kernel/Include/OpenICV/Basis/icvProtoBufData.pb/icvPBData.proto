@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+package icvPBDataPkg;
+
+message icvPBDataMsg {
+  optional uint32 len=1;
+  optional sint32 timestamp=2;
+  optional google.protobuf.Any buffer = 3;
+}
+
+message icvTestPbMsg{
+  optional int32 id = 2;
+  optional string name = 1;
+}
+
+
+
+//protoc -I=./ icvPBData.proto --cpp_out=./
+

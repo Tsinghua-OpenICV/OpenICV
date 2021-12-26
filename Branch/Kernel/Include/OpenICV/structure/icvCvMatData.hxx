@@ -206,7 +206,8 @@ namespace icv
 			std::vector<uchar> data(str_tmp.begin(), str_tmp.end());
 			//cout<<"size of received data: "<<data.size()<<endl;
             //img_decode=mFrame;
-			tempdata = cv::imdecode(data, CV_LOAD_IMAGE_COLOR);
+			// tempdata = cv::imdecode(data, CV_LOAD_IMAGE_COLOR);
+            tempdata = cv::imdecode(data, cv::IMREAD_COLOR);
             _data=&tempdata;
                 }
             }

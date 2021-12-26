@@ -20,11 +20,11 @@ namespace icv { namespace function
 
     private:
         std::ostream* _output;
-        icvSubscriber* sub1;
-        icvPublisher* pub1;
+        // icvSubscriber* sub1;
+        // icvPublisher* pub1;
         icv::data::icvIntData* rec1;
         bool read_input_flag=true;
-         stringstream ss;
+        stringstream ss;
     };
 }}
 

@@ -23,8 +23,8 @@ namespace icv { namespace function
     private:
         int _interval = 100;
         icv::data::icvInt64Data *tempdata;
-        icvSubscriber* subs1;
-        icvPublisher* pubs1;
+        // icvSubscriber* subs1;
+        // icvPublisher* pubs1;
     };
 }}
 

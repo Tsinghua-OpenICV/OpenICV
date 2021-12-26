@@ -139,27 +139,27 @@ public:
                 _recorder->Record(pub_buff,record_name);
                 //cout<<"sub in the name of: "<<record_name<<endl;
                 reco_count++;
-                //    if(record_name=="first_cam")
-                //             {
-                //                 imagefolderpath_=global_path/record_name;
-                //                 mkdir(imagefolderpath_.string().c_str(),S_IRUSR | S_IWUSR | S_IXUSR | S_IRWXG | S_IRWXO);
-                //                 //data::icvCvMatData cam_msg;
-                //                 //icvSubscribe("first_cam",&cam_msg);
-                //                 //cv::Mat temp_mat= cam_msg.getvalue();
-                //                 cv::Mat temp_mat= pub_buff->As<data::icvCvMatData>().getvalue();
-                //                 //cout<<temp_mat.total()<<endl;
-                //                 imshow("record picture",temp_mat);
-                //                 waitKey(1);
-                //                 //string tem_S=temp_mat.getImageName();
-                //                 string tem_S=pub_buff->As<data::icvCvMatData>().getImageName();
-                //                 //string tem_S=to_string(count_);
-                //                 //cout<<"After transmition is "<<tem_S<<endl;
-                //                 string file_name=(imagefolderpath_/tem_S).string()+".jpg";
-                //                 //cout<<file_name<<endl;   
-                //                 // std::cout<<file_name<<std::endl; 
-                //                 cv::imwrite(file_name, temp_mat);
+                   if(record_name=="first_cam")
+                            {
+                                imagefolderpath_=global_path/record_name;
+                                mkdir(imagefolderpath_.string().c_str(),S_IRUSR | S_IWUSR | S_IXUSR | S_IRWXG | S_IRWXO);
+                                //data::icvCvMatData cam_msg;
+                                //icvSubscribe("first_cam",&cam_msg);
+                                //cv::Mat temp_mat= cam_msg.getvalue();
+                                cv::Mat temp_mat= pub_buff->As<data::icvCvMatData>().getvalue();
+                                //cout<<temp_mat.total()<<endl;
+                                imshow("record picture",temp_mat);
+                                waitKey(1);
+                                //string tem_S=temp_mat.getImageName();
+                                string tem_S=pub_buff->As<data::icvCvMatData>().getImageName();
+                                //string tem_S=to_string(count_);
+                                //cout<<"After transmition is "<<tem_S<<endl;
+                                string file_name=(imagefolderpath_/tem_S).string()+".jpg";
+                                //cout<<file_name<<endl;   
+                                // std::cout<<file_name<<std::endl; 
+                                cv::imwrite(file_name, temp_mat);
 
-                //             }
+                            }
                     if(record_name=="pandar_points"||record_name=="robosense_points")
                             {
                                 pointcloud_path_=global_path/record_name;

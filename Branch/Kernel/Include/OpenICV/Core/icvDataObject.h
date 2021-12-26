@@ -29,7 +29,7 @@ namespace icv { namespace core
         };
         enum DATATYPE
         {
-              ICVSTRUCTUREDATA=1, ICVCVMATDATA, ICVPOINTCLOUDDATA, ICVPRIMITIVEDATA
+              ICVSTRUCTUREDATA=1, ICVCVMATDATA, ICVPOINTCLOUDDATA, ICVPRIMITIVEDATA, ICVPORTOBUFDATA
         };
        
         // virtual ~icvDataObject()

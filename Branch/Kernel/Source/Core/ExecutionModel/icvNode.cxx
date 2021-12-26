@@ -88,18 +88,18 @@ namespace icv { namespace core
 
     void icvNode::syncLoop()
     {
-        ICV_LOG_INFO<<"fequency of node "<<this->get_nodename()<<" : "<<1000000/micro_Sec_loop;
+        ICV_LOG_INFO<<"frequency of node "<<this->get_nodename()<<" : "<<1000000/micro_Sec_loop<<" "<<active_;
         while(active_)
-        {
-        timesync_->Release();
+        {   
 
+        timesync_->Release();
         usleep(micro_Sec_loop);
         }
     }
 
 
 
-   void icvNode::Trigger(icvPublisher* caller)
+   void icvNode::Trigger(icvPublisherInterface* caller)
     {
         _lock.unlock();
     }
@@ -129,12 +129,12 @@ namespace icv { namespace core
     //     Disconnect(consumer->GetInputPort(consumerPort), producer->GetOutputPort(producerPort));
     // }
 
-    void Connect(icvSubscriber* input, icvPublisher* output)
+    void Connect(icvSubscriberInterface* input, icvPublisherInterface* output)
     {
         input->GetConnections().push_back(output);
         output->GetConnections().push_back(input);
     }
-    void Disconnect(icvSubscriber* input, icvPublisher* output)
+    void Disconnect(icvSubscriberInterface* input, icvPublisherInterface* output)
     {
         // Remove output port from input connections
         auto inconnection = find(input->GetConnections().begin(), input->GetConnections().end(), output);

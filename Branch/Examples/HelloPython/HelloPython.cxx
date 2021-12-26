@@ -47,7 +47,7 @@ public:
 
     virtual void Execute() override
     {
-		    cam_info->header.seq+=1;
+		 cam_info->header.seq+=1;
             cam_info->width+=1;
             cam_info->K[2]+=1;
             tempdata->setvaluePtr(cam_info);
@@ -60,6 +60,9 @@ public:
             ICV_LOG_INFO<<"FrameID: "<<cam_info->header.frame_id;
 			count_++ ;
            
+			
+
+
 		
     }
 private:

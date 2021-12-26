@@ -12,15 +12,15 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    po::options_description desc("Allowed options");  //名称空间+类+对象
+    po::options_description desc("Allowed options");
     desc.add_options()
         ("help", "show help message")
         ("config", po::value<string>(), "load node structure from given configuration file")
         ;
 
-    po::positional_options_description config_file; 
+    po::positional_options_description config_file;
     config_file.add("config", 1);
-    po::variables_map vm;//名称空间+类+对象
+    po::variables_map vm;
 
     po::store(po::command_line_parser(argc, argv).options(desc).positional(config_file).run(), vm);
     po::notify(vm);
@@ -32,9 +32,9 @@ int main(int argc, char *argv[])
 
         fs::path tpath = fs::system_complete(vm["config"].as<string>());
     
-        icv::engine::icvNamedEngine engine;  //实例化对象
+        icv::engine::icvNamedEngine engine;
 
-        engine.LoadConfiguration(tpath);  //载入配置文件
+        engine.LoadConfiguration(tpath);
 
         engine.Start();
         engine.Hold();

@@ -10,6 +10,7 @@
 #include "OpenICV/Core/icvTime.h"
 #include "OpenICV/Core/icvConfig.h"
 #include "OpenICV/structure/icvCvMatData.hxx"
+
 #include <boost/thread/thread.hpp>
 #include <iostream>
 #include <opencv/cxcore.h>

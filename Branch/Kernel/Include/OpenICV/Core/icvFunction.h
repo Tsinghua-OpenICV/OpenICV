@@ -68,13 +68,35 @@ using namespace std;
     bool is_input_connected(string name)
     {       return icvSubscriber_[name]->GetConnections().size()>0;
 };
-    icvPublisher* Register_Pub( string pub_name,bool noneedname=true){
+    // icvPublisher* Register_Pub( string pub_name,bool noneedname=true){
      
+    //  string pub_name_tem;
+    //    if(noneedname) pub_name_tem=_keys::portSplitpoint+pub_name;
+    //     else  pub_name_tem=node_name_+_keys::portSplitpoint+pub_name;
+
+    //         icvPublisher_.emplace(pub_name_tem, new icvPublisher(this));
+    //         icvPublisher_[pub_name_tem]->setname(pub_name_tem);
+    //         pub_names_->push_back(pub_name_tem);
+    //        // first_pub->emplace(icvPublisher_[pub_name_tem],true);
+
+    //         if(std::count(pub_names_->begin(), pub_names_->end(), pub_name_tem)>1)
+    //         ICV_THROW_MESSAGE("the publisher name exists, please change the name");
+    //         count_pub++;
+
+
+    //     return icvPublisher_[pub_name_tem];
+
+
+    // };
+
+    template <typename T, typename = typename std::enable_if<(std::is_base_of<icv::core::icvDataObject, T>::value)>::type>
+    icvPublisherInterface* Register_Pub(string pub_name,bool noneedname=true){
+    
      string pub_name_tem;
        if(noneedname) pub_name_tem=_keys::portSplitpoint+pub_name;
         else  pub_name_tem=node_name_+_keys::portSplitpoint+pub_name;
 
-            icvPublisher_.emplace(pub_name_tem, new icvPublisher(this));
+            icvPublisher_.emplace(pub_name_tem, new icvPublisher<T>(this));
             icvPublisher_[pub_name_tem]->setname(pub_name_tem);
             pub_names_->push_back(pub_name_tem);
            // first_pub->emplace(icvPublisher_[pub_name_tem],true);
@@ -83,11 +105,11 @@ using namespace std;
             ICV_THROW_MESSAGE("the publisher name exists, please change the name");
             count_pub++;
 
-
         return icvPublisher_[pub_name_tem];
 
 
     };
+
     // icvPublisher* Register_Pub(const string &pub_name){
 
     //         icvPublisher_.emplace(pub_name, new icvPublisher(this));
@@ -121,7 +143,9 @@ using namespace std;
     //         return icvSubscriber_[pub_name];
 
     // };
-      icvSubscriber* Register_Sub( const string pubtopic_name,const string pubnode_name="") 
+
+    template <typename T, typename = typename std::enable_if<(std::is_base_of<icv::core::icvDataObject, T>::value)>::type>
+    icvSubscriberInterface* Register_Sub(const string pubtopic_name,const string pubnode_name="") 
     {
         //cout<<"ckpt0: "<<endl;
 
@@ -129,7 +153,7 @@ using namespace std;
         //cout<<"ckpt1: the name to subscribe is: "<<sub_name_tem<<endl;
         string pub_name_tem=pubnode_name+_keys::portSplitpoint+pubtopic_name;
            // pubname_subnum_map->emplace( count_sub,pub_name);
-            icvSubscriber_.emplace(sub_name_tem,new icvSubscriber(this)) ;
+            icvSubscriber_.emplace(sub_name_tem,new icvSubscriber<T>(this));
             icvSubscriber_[sub_name_tem]->setname(sub_name_tem);
             sub_names_->push_back(sub_name_tem);
             connections_->push_back(pair<string, string>(node_name_ + _keys::portSplitpoint + sub_name_tem, pub_name_tem));
@@ -143,24 +167,25 @@ using namespace std;
             return icvSubscriber_[sub_name_tem];
 
     };
-            icvSubscriber* Register_Sub_trig( const string pubtopic_name,bool trig, const string pubnode_name="") 
-    {
-        string sub_name_tem=node_name_+_keys::portSplitpoint+pubnode_name+_keys::portSplitpoint+pubtopic_name;
-        string pub_name_tem=pubnode_name+_keys::portSplitpoint+pubtopic_name;
-           // pubname_subnum_map->emplace( count_sub,pub_name);
-            icvSubscriber_.emplace(sub_name_tem,new icvSubscriber(this)) ;
-            icvSubscriber_[sub_name_tem]->setname(sub_name_tem);
-            sub_names_->push_back(sub_name_tem);
-            if(trig)icvSubscriber_[sub_name_tem]->enable_Trigger();
-            connections_->push_back(pair<string, string>(sub_name_tem, pub_name_tem));
-           // first_sub->emplace(icvSubscriber_[pub_name_tem],true);
-          //  if(std::count(connections_->begin(), connections_->end(), pair<string, string>(node_name_ + _keys::portSplitpoint + pub_name_tem, pub_name_tem))>1)
-          //  ICV_THROW_MESSAGE("the subscriber name exists, please change the name");
 
-            count_sub++;
-            return icvSubscriber_[sub_name_tem];
+    // icvSubscriber* Register_Sub_trig( const string pubtopic_name,bool trig, const string pubnode_name="") 
+    // {
+    //     string sub_name_tem=node_name_+_keys::portSplitpoint+pubnode_name+_keys::portSplitpoint+pubtopic_name;
+    //     string pub_name_tem=pubnode_name+_keys::portSplitpoint+pubtopic_name;
+    //        // pubname_subnum_map->emplace( count_sub,pub_name);
+    //         icvSubscriber_.emplace(sub_name_tem,new icvSubscriber(this)) ;
+    //         icvSubscriber_[sub_name_tem]->setname(sub_name_tem);
+    //         sub_names_->push_back(sub_name_tem);
+    //         if(trig)icvSubscriber_[sub_name_tem]->enable_Trigger();
+    //         connections_->push_back(pair<string, string>(sub_name_tem, pub_name_tem));
+    //        // first_sub->emplace(icvSubscriber_[pub_name_tem],true);
+    //       //  if(std::count(connections_->begin(), connections_->end(), pair<string, string>(node_name_ + _keys::portSplitpoint + pub_name_tem, pub_name_tem))>1)
+    //       //  ICV_THROW_MESSAGE("the subscriber name exists, please change the name");
 
-    };
+    //         count_sub++;
+    //         return icvSubscriber_[sub_name_tem];
+
+    // };
     long vectorSum(vector<long> a)
     {
             long sum=0;
@@ -338,82 +363,74 @@ using namespace std;
             string sub=subnodename+_keys::portSplitpoint+sub1;
             //cout<<"ckpt3: the name to subscribe is: "<<sub<<endl;
 
-                if(icvSubscriber_.at(sub)->isconnected())
+            if(!icvSubscriber_.at(sub)->isconnected()){
+                ICV_LOG_WARN<<"icvFunction::icvSubscribe: the subscriber hasn't been connected.";
+                return;
+            }
+            if(!icvSubscriber_.at(sub)->isMatchingConnectionType()){
+                ICV_LOG_WARN<<"icvFunction::icvSubscribe: the connected subscriber type doesn't match publisher's definition.";
+                return;
+            }
+            if(!icvSubscriber_.at(sub)->isSuitableDataType(data)){
+                ICV_LOG_WARN<<"icvFunction::icvSubscribe: the data type doesn't match subscriber's definition.";
+                return;
+            }
 
+            icvDataObject* sub_buff = icvSubscriber_.at(sub)->RequireDataObject();
+
+            if(sub_buff) 
+            {
+                if(first_sub->at(icvSubscriber_.at(sub)))
                 {
+                    //cout<<"send memory is: "<<sub_buff->GetActualMemorySize()<<" and the receive memory is: "<<data->GetActualMemorySize()<<endl;
+                    // if(data->GetActualMemorySize()==sub_buff->GetActualMemorySize()&&data->GetActualMemorySize()>0)
+                    // datatypecheck=true; 
+                        // this should not be checked only once.
+                    first_sub->at(icvSubscriber_.at(sub))=false;
+                    
+                }
+                // if(datatypecheck) {
+                sub_buff->CopyTo(data);
+                data->empty=false;
+                // } 
+                // else ICV_LOG_WARN<<"SUBSCRIBE DATA TYPE NOT CORRESPONDED";
                 
-
-
-                icvDataObject* sub_buff= icvSubscriber_.at(sub)->RequireDataObject();
-
-
-                if(sub_buff) 
-                {
-
-
-                    if(first_sub->at(icvSubscriber_.at(sub)))
-                    {
-                        //cout<<"send memory is: "<<sub_buff->GetActualMemorySize()<<" and the receive memory is: "<<data->GetActualMemorySize()<<endl;
-                        if(data->GetActualMemorySize()==sub_buff->GetActualMemorySize()&&data->GetActualMemorySize()>0)
-                        datatypecheck=true;
-                        first_sub->at(icvSubscriber_.at(sub))=false;
-                        
-                    }
-                    if(datatypecheck) {
-                    sub_buff->CopyTo(data);
-                    data->empty=false;
-                    } 
-                    else ICV_LOG_WARN<<"SUBSCRIBE DATA TYPE NOT CORRESPONDED";
-                    
-                }
-                else {  ICV_LOG_WARN<<"SUBSCRIBE DATA EMPTY"; }
-  
-                            
-
-
-
             }
+            else {  ICV_LOG_WARN<<"SUBSCRIBE DATA EMPTY"; }
     }
-    template <typename T>  T* icvSubscribe(string sub)
-    {
 
+    // haven't updated
+    // template <typename T>  T* icvSubscribe(string sub)
+    // {
 
+    //             if(icvSubscriber_.at(sub)->isconnected())
 
-                if(icvSubscriber_.at(sub)->isconnected())
+    //             {
 
-                {
+    //             icvDataObject* sub_buff= icvSubscriber_.at(sub)->RequireDataObject();
 
+    //             if(sub_buff) 
+    //             {
 
-                icvDataObject* sub_buff= icvSubscriber_.at(sub)->RequireDataObject();
-
-
-                if(sub_buff) 
-                {
-
-                    if(first_sub->at(icvSubscriber_.at(sub)))
-                    {
-                        datatypecheck=CheckDataType<T>(icvSubscriber_.at(sub));
-                        first_sub->at(icvSubscriber_.at(sub))=false;
+    //                 if(first_sub->at(icvSubscriber_.at(sub)))
+    //                 {
+    //                     datatypecheck=CheckDataType<T>(icvSubscriber_.at(sub));
+    //                     first_sub->at(icvSubscriber_.at(sub))=false;
                         
-                    }
-                    if(datatypecheck) 
-                    return static_cast<T*>(sub_buff); 
-                    else ICV_LOG_FATAL<<"SUBSCRIBE DATA TYPE NOT CORRESPONDED";
+    //                 }
+    //                 if(datatypecheck) 
+    //                 return static_cast<T*>(sub_buff); 
+    //                 else ICV_LOG_FATAL<<"SUBSCRIBE DATA TYPE NOT CORRESPONDED";
                     
-                }
-                else{
-
-
+    //             }
+    //             else{
                     
-                T* temp_=new T();
-                return temp_; 
-                } 
-                            
+    //             T* temp_=new T();
+    //             return temp_; 
+    //             } 
 
-
-
-            }
-    }
+    //         }
+    // }
 
 
     // void icvPublish(string pub,icvDataObject* datatosend)
@@ -427,23 +444,28 @@ using namespace std;
 
 
     // }
-     void icvPublish(string pub_name,icvDataObject* datatosend,bool noneedname=true)
+    void icvPublish(string pub_name,icvDataObject* datatosend,bool noneedname=true)
     {
 
-         string pub_name_tem;
+        string pub_name_tem;
          
-       if(noneedname) pub_name_tem=_keys::portSplitpoint+pub_name;
-        else  pub_name_tem=node_name_+_keys::portSplitpoint+pub_name;
-       //cout<<"icvPublish " <<pub_name_tem<<endl;
-       if(find(pub_names_->begin(), pub_names_->end(), pub_name_tem)==pub_names_->end()) 
-       ICV_LOG_INFO<<"Publisher : "<<pub_name_tem<<"  not registered";
+        if(noneedname) pub_name_tem=_keys::portSplitpoint+pub_name;
+            else  pub_name_tem=node_name_+_keys::portSplitpoint+pub_name;
+        //cout<<"icvPublish " <<pub_name_tem<<endl;
+        if(find(pub_names_->begin(), pub_names_->end(), pub_name_tem)==pub_names_->end())
+        {
+            ICV_LOG_INFO<<"Publisher : "<<pub_name_tem<<"  not registered";
+            return;
+        }
 
-        icvPublisher_.at(pub_name_tem)->set_send_data(datatosend);
-        icvPublisher_.at(pub_name_tem)->Send_Out();
-
-
-
+        if(icvPublisher_.at(pub_name_tem)->isSuitableDataType(datatosend)) {
+                icvPublisher_.at(pub_name_tem)->set_send_data(datatosend);
+                icvPublisher_.at(pub_name_tem)->Send_Out();
+        } else {
+            ICV_LOG_WARN<<"icvFunction::icvPublish: the type of data to send doesn't match the publisher definition";
+        }
     }
+
     bool has_Triggerinput()
     {
             int count_trig=0;
@@ -459,29 +481,31 @@ using namespace std;
     };
 
 
-    icvSubscriber* GetInputPort(string port)
+    icvSubscriberInterface* GetInputPort(string port)
     {
-            if (find(sub_names_->begin(), sub_names_->end(), port)==sub_names_->end())
-            icvSubscriber_.emplace(port,new icvSubscriber(this));
+            // if (find(sub_names_->begin(), sub_names_->end(), port)==sub_names_->end())
+            // icvSubscriber_.emplace(port,new icvSubscriber(this));
 
 
             return icvSubscriber_[port];
     };
 
-    icvPublisher* GetOutputPort(string port)
+    icvPublisherInterface* GetOutputPort(string port)
     {
-            if (find(pub_names_->begin(), pub_names_->end(), port)==pub_names_->end())
-            icvPublisher_.emplace(port,new icvPublisher(this));
+            // if (find(pub_names_->begin(), pub_names_->end(), port)==pub_names_->end())
+            // icvPublisher_.emplace(port,new icvPublisher(this));
 
 
             return icvPublisher_[port];
     };
 
 
+
+
     void set_zmq_context_uniq(void* context){context_zmq_uniq= context;} 
 
-    std::vector<icvPublisher*> GetPublisherPtrvector(){
-        std::vector<icvPublisher*> temp;
+    std::vector<icvPublisherInterface*> GetPublisherPtrvector(){
+        std::vector<icvPublisherInterface*> temp;
         for(auto x:icvPublisher_){temp.push_back(x.second);}
         return temp;
      };                
@@ -513,11 +537,11 @@ using namespace std;
     icvDataObject** inData;
     icvDataObject** outData;
     std::vector<bool> _first_send;//first time to send data
-    icv_map<string,icvPublisher*> icvPublisher_;
-    icv_map<string,icvSubscriber*> icvSubscriber_;
+    icv_map<string,icvPublisherInterface*> icvPublisher_;
+    icv_map<string,icvSubscriberInterface*> icvSubscriber_;
     icv_map< string,icvDataObject::Ptr>* publishdata_= new icv_map< string,icvDataObject::Ptr>();
-    icv_map<icvPublisher*,bool>* first_pub= new icv_map<icvPublisher*,bool>();
-    icv_map<icvSubscriber*,bool>* first_sub= new icv_map< icvSubscriber*,bool>();
+    icv_map<icvPublisherInterface*,bool>* first_pub= new icv_map<icvPublisherInterface*,bool>();
+    icv_map<icvSubscriberInterface*,bool>* first_sub= new icv_map< icvSubscriberInterface*,bool>();
 
     icv_mutex dataoutlock;
     int count_pub=0,count_sub=0;

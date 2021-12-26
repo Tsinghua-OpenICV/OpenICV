@@ -46,7 +46,7 @@ class icvZmqNet : public icvFunction
 		// zmq sending sockets
 
         string sub1="socket1";
-        Register_Sub(sub1);
+        // Register_Sub(sub1);
         void* receivesocket = zmq_socket (context, ZMQ_SUB);  
         zmq_connect (receivesocket, "tcp://127.0.0.1:6970");
         zmq_setsockopt (receivesocket, ZMQ_SUBSCRIBE, "", 0);
@@ -54,7 +54,7 @@ class icvZmqNet : public icvFunction
 
 
         string pub1="socket2";
-        Register_Pub(pub1);
+        // Register_Pub(pub1);
         void* broadcastingSocket = zmq_socket (context, ZMQ_PUB);
         zmq_bind(broadcastingSocket, "tcp://*:6974");  
         sendingSocket_withnames.emplace(sub1,broadcastingSocket);

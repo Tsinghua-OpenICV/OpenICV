@@ -2,6 +2,7 @@
 #define __CANFRAME_H__
 
 #include <cstddef>
+#include <cstddef>
 #include <cstdlib>
 #include <string>
 #include <sstream>

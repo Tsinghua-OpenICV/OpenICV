@@ -12,7 +12,9 @@
 #include "OpenICV/Core/icvPublisher.h"
 namespace icv { namespace core
 {
-
+    class icvNode;
+    class icvSubscriberInterface;
+    class icvPublisherInterface;
     
     class icv_thread_guard
 {
@@ -43,14 +45,14 @@ class icvNodeManager : public icvObject
         void response_monitor(string nodename);
         void check_delayed_node();
         void rec_thread_id(string name,icv_thread* t);
-        vector<icvPublisher*> GetAllPublisher(){return AllPublisher;}
+        vector<icvPublisherInterface*> GetAllPublisher(){return AllPublisher;}
 
     private:
         icv_map<string,long>* last_upd_time_of_nodes=new icv_map<string,long>();
         icv_map<string,long>* upd_period_of_nodes=new  icv_map<string,long>();
         icv_map<string,icv_thread::id>* thread_id_of_nodes=new  icv_map<string,icv_thread::id>();
         icv_map<std::string, icv_shared_ptr<icvNode>>* node_name_map_;
-        std::vector<icvPublisher*> AllPublisher;
+        std::vector<icvPublisherInterface*> AllPublisher;
 
 };
 }}

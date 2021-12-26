@@ -48,7 +48,7 @@ namespace icv { namespace core
     };
 }}
 
-/// Use this macros to statically register function.
+// Use this macros to statically register function.
 #define ICV_REGISTER_FUNCTION(type)                                               \
 namespace _generated                                                              \
 {                                                                                 \

@@ -6,7 +6,7 @@
 #include "OpenICV/Core/icvConfig.h"
 #undef ICV_CONFIG_CONTAINERS
 #undef ICV_CONFIG_POINTERS
-
+ 
 #include <boost/filesystem/path.hpp>
 
 #include "OpenICV/Engine/icvEngine.h"
@@ -22,8 +22,8 @@ namespace icv { namespace engine
 
     protected:
         icv_map<std::string, icv_shared_ptr<icvNode>>* _node_name_map=new icv_map<std::string, icv_shared_ptr<icvNode>>();
-        icv_map<std::string, icvSubscriber*> _input_name_map;
-        icv_map<std::string, icvPublisher*> _output_name_map;
+        icv_map<std::string, icvSubscriberInterface*> _input_name_map;
+        icv_map<std::string, icvPublisherInterface*> _output_name_map;
     
     private:
         icvFunction* ParseFunction(icv_shared_ptr<const icvMetaData> container_params);
